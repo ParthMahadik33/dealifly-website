@@ -614,8 +614,8 @@ body.dealifly-homepage .border-primary-emphasis {
 body.dealifly-homepage .dealifly-industries-section {
     position: relative;
     z-index: 1;
-    padding-block-start: clamp(3rem, 5vw, 5.5rem) !important;
-    padding-block-end: clamp(3rem, 5vw, 5.5rem) !important;
+    padding-block-start: clamp(2rem, 3.2vw, 3rem) !important;
+    padding-block-end: clamp(2.25rem, 3.5vw, 3.25rem) !important;
 }
 
 body.dealifly-homepage .dealifly-industry-card {
@@ -1852,15 +1852,20 @@ body.dealifly-homepage .dealifly-dropdown-menu .dealifly-drop-all:hover {
    ================================================================ */
 body.dealifly-homepage .dealifly-about-section {
     position: relative;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: clamp(2.5rem, 3.8vw, 3.5rem) !important;
+    padding-bottom: clamp(2.25rem, 3.5vw, 3.25rem) !important;
     background: transparent;
     overflow: hidden;
 }
 
+body.dealifly-homepage #about {
+    scroll-margin-top: clamp(95px, 10vw, 120px) !important;
+}
+
 body.dealifly-homepage .dealifly-about-portrait-wrap {
     position: relative;
-    max-width: 440px;
+    max-width: 470px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -1886,7 +1891,7 @@ body.dealifly-homepage .dealifly-about-portrait-frame {
     background: #0E0D14;
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.04);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 4.65;
     transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1), border-color 380ms ease, box-shadow 380ms ease;
 }
 
@@ -1900,7 +1905,7 @@ body.dealifly-homepage .dealifly-about-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center 18%;
     display: block;
 }
 
@@ -1911,8 +1916,8 @@ body.dealifly-homepage .dealifly-about-portrait-card {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 1.25rem;
-    padding: 0.55rem 1.15rem 0.55rem 0.85rem;
+    margin-top: 1.15rem;
+    padding: 0.5rem 1.15rem 0.5rem 0.85rem;
     background: rgba(18, 17, 26, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -1948,26 +1953,27 @@ body.dealifly-homepage .dealifly-about-content {
 }
 
 body.dealifly-homepage .dealifly-about-heading {
-    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-size: clamp(2rem, 3vw, 2.65rem);
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: 1.15;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.85rem;
     color: #FFFFFF !important;
 }
 
 body.dealifly-homepage .dealifly-about-lead {
-    font-size: 1.125rem;
-    line-height: 1.7;
+    font-size: 1.05rem;
+    line-height: 1.65;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.95) !important;
+    margin-bottom: 0.85rem;
 }
 
 body.dealifly-homepage .dealifly-about-p {
-    font-size: 0.98rem;
-    line-height: 1.75;
+    font-size: 0.94rem;
+    line-height: 1.65;
     color: rgba(245, 245, 247, 0.72) !important;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.85rem;
 }
 
 body.dealifly-homepage .dealifly-about-p strong {
@@ -1978,25 +1984,25 @@ body.dealifly-homepage .dealifly-about-p strong {
 /* Key Statement Callout - Emotional Core */
 body.dealifly-homepage .dealifly-about-statement {
     position: relative;
-    padding: 1.25rem 1.65rem;
+    padding: 1rem 1.4rem;
     background: linear-gradient(90deg, rgba(143, 122, 232, 0.08) 0%, rgba(143, 122, 232, 0.015) 100%);
     border-left: 3px solid #8F7AE8;
-    border-radius: 0 14px 14px 0;
-    margin: 1.75rem 0;
+    border-radius: 0 12px 12px 0;
+    margin: 1.15rem 0;
 }
 
 body.dealifly-homepage .dealifly-about-statement__quote {
-    font-size: 1.18rem;
+    font-size: 1.125rem;
     font-weight: 500;
-    line-height: 1.55;
+    line-height: 1.5;
     color: #FFFFFF !important;
     font-style: italic;
     letter-spacing: -0.01em;
 }
 
 body.dealifly-homepage .dealifly-about-closing {
-    font-size: 0.94rem;
-    line-height: 1.65;
+    font-size: 0.93rem;
+    line-height: 1.6;
     color: rgba(245, 245, 247, 0.78) !important;
 }
 
@@ -2011,8 +2017,8 @@ body.dealifly-homepage .dealifly-about-closing {
 /* Mobile & Tablet Adjustments (< 992px) */
 @media (max-width: 991.98px) {
     body.dealifly-homepage .dealifly-about-section {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
     }
 
     body.dealifly-homepage .dealifly-about-portrait-wrap {
@@ -2020,8 +2026,12 @@ body.dealifly-homepage .dealifly-about-closing {
         margin-bottom: 1.5rem;
     }
 
+    body.dealifly-homepage .dealifly-about-portrait-frame {
+        aspect-ratio: 1 / 1;
+    }
+
     body.dealifly-homepage .dealifly-about-statement {
-        padding: 1rem 1.25rem;
+        padding: 0.85rem 1.15rem;
     }
 
     body.dealifly-homepage .dealifly-about-statement__quote {
@@ -2034,8 +2044,8 @@ body.dealifly-homepage .dealifly-about-closing {
    ================================================================ */
 body.dealifly-homepage .dealifly-contact-section {
     position: relative;
-    padding-top: 5rem;
-    padding-bottom: 5.5rem;
+    padding-top: clamp(2.25rem, 3.5vw, 3.25rem) !important;
+    padding-bottom: clamp(2.5rem, 3.8vw, 3.5rem) !important;
     background: transparent;
     overflow: hidden;
 }
@@ -2255,11 +2265,47 @@ body.dealifly-homepage .dealifly-contact-status.error {
     }
 }
 
+/* ================================================================
+   HOMEPAGE VERTICAL RHYTHM REFINEMENTS (Unified Section Spacing)
+   Desktop: 64–88px between section content
+   Tablet:  52–68px
+   Mobile:  40–56px
+   ================================================================ */
+
+/* Section Scroll Margins for Floating Sticky Navbar */
+body.dealifly-homepage section[id],
+body.dealifly-homepage div[id] {
+    scroll-margin-top: clamp(85px, 9vw, 110px) !important;
+}
+
+/* Service Tags Ticker */
+body.dealifly-homepage .dealifly-service-tags {
+    padding-top: clamp(0.75rem, 1.5vw, 1.35rem) !important;
+    padding-bottom: clamp(1rem, 1.8vw, 1.65rem) !important;
+}
+
+/* Planning / AI Outreach Feature Section */
+body.dealifly-homepage .dealifly-planning-section {
+    padding-top: clamp(1.75rem, 2.8vw, 2.75rem) !important;
+    padding-bottom: clamp(2.25rem, 3.5vw, 3.25rem) !important;
+}
+
+/* Reviews Section */
+body.dealifly-homepage .dealifly-reviews-section {
+    padding-top: clamp(2.25rem, 3.5vw, 3.25rem) !important;
+    padding-bottom: clamp(2.25rem, 3.5vw, 3.25rem) !important;
+}
+
+/* Footer */
+body.dealifly-homepage .dealifly-footer-inner {
+    padding-top: clamp(2.25rem, 3.5vw, 3.25rem) !important;
+}
+
 /* Mobile & Tablet Adjustments (< 992px) */
 @media (max-width: 991.98px) {
     body.dealifly-homepage .dealifly-contact-section {
-        padding-top: 3.5rem;
-        padding-bottom: 4rem;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.5rem !important;
     }
 
     body.dealifly-homepage .dealifly-contact-form-card {
@@ -2270,6 +2316,12 @@ body.dealifly-homepage .dealifly-contact-status.error {
     body.dealifly-homepage .dealifly-contact-trust-logos {
         justify-content: flex-start;
         gap: 1.25rem;
+    }
+
+    body.dealifly-homepage .dealifly-planning-section,
+    body.dealifly-homepage .dealifly-reviews-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
 }
 
