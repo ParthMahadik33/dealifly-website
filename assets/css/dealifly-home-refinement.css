@@ -1961,6 +1961,10 @@ body.dealifly-homepage .dealifly-about-heading {
     color: #FFFFFF !important;
 }
 
+body.dealifly-homepage .dealifly-about-header {
+    margin-bottom: 1.25rem;
+}
+
 body.dealifly-homepage .dealifly-about-lead {
     font-size: 1.05rem;
     line-height: 1.65;
