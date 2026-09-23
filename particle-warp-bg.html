@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Particle Warp Background</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: #050506;
+    color: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  #bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* subtle vignette so text stays readable over the effect */
+  #vignette {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 45%, rgba(5,5,6,0) 0%, rgba(5,5,6,0.55) 70%, rgba(5,5,6,0.85) 100%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 7vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  h1 span { color: #a78bfa; }
+
+  p {
+    max-width: 640px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: rgba(245,245,247,0.72);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .controls {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 3;
+    background: rgba(20,20,24,0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    color: rgba(245,245,247,0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 220px;
+  }
+  .controls label { display: flex; justify-content: space-between; gap: 0.5rem; align-items: center; }
+  .controls input[type="range"] { width: 110px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    #bg-canvas { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+<div id="vignette"></div>
+
+<div class="content">
+  <h1>Powering <span>24/7</span> Markets</h1>
+  <p>A lightweight canvas particle effect — no WebGL, no dependencies, runs smoothly on any site. Drop this in as your page background.</p>
+</div>
+
+<div class="controls">
+  <label>Density <input type="range" id="density" min="20" max="220" value="90"></label>
+  <label>Speed <input type="range" id="speed" min="1" max="10" value="4"></label>
+</div>
+
+<script>
+(function () {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d', { alpha: false });
+
+  let W, H, cx, cy;
+  let particles = [];
+  let particleCount = 90;
+  let speedMultiplier = 0.4;
+
+  const colors = [
+    'rgba(245,245,247,',   // white
+    'rgba(196,181,253,',   // lavender
+    'rgba(52,211,153,',    // green accent
+  ];
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = canvas.width = window.innerWidth * dpr;
+    H = canvas.height = window.innerHeight * dpr;
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cx = window.innerWidth / 2;
+    cy = window.innerHeight * 0.42;
+  }
+
+  function makeParticle(spawnAtCenter) {
+    const angle = Math.random() * Math.PI * 2;
+    const dist = spawnAtCenter ? Math.random() * 30 : Math.random() * Math.max(window.innerWidth, window.innerHeight) * 0.75;
+    const speed = (0.6 + Math.random() * 1.8);
+    return {
+      angle,
+      dist,
+      speed,
+      len: 10 + Math.random() * 60,
+      color: colors[Math.floor(Math.random() * colors.length) === 2 && Math.random() > 0.15 ? (Math.random() > 0.5 ? 0 : 1) : Math.floor(Math.random() * colors.length)],
+      alpha: 0.15 + Math.random() * 0.5,
+      width: 0.6 + Math.random() * 1.4
+    };
+  }
+
+  function initParticles() {
+    particles = [];
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(makeParticle(false));
+    }
+  }
+
+  function step() {
+    ctx.fillStyle = '#050506';
+    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+
+    const maxDist = Math.max(window.innerWidth, window.innerHeight) * 0.85;
+
+    for (let p of particles) {
+      const x0 = cx + Math.cos(p.angle) * p.dist;
+      const y0 = cy + Math.sin(p.angle) * p.dist;
+      const trailDist = p.dist - p.len;
+      const x1 = cx + Math.cos(p.angle) * Math.max(trailDist, 0);
+      const y1 = cy + Math.sin(p.angle) * Math.max(trailDist, 0);
+
+      // fade out as it approaches edge
+      const edgeFade = 1 - Math.max(0, (p.dist - maxDist * 0.7) / (maxDist * 0.3));
+      const a = p.alpha * Math.max(0, Math.min(1, edgeFade));
+
+      const grad = ctx.createLinearGradient(x1, y1, x0, y0);
+      grad.addColorStop(0, p.color + '0)');
+      grad.addColorStop(1, p.color + a + ')');
+
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = p.width;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x0, y0);
+      ctx.stroke();
+
+      p.dist += p.speed * speedMultiplier * 4;
+
+      if (p.dist > maxDist) {
+        Object.assign(p, makeParticle(true));
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  resize();
+  initParticles();
+  window.addEventListener('resize', () => { resize(); });
+  requestAnimationFrame(step);
+
+  // controls
+  const densityInput = document.getElementById('density');
+  const speedInput = document.getElementById('speed');
+  densityInput.addEventListener('input', (e) => {
+    particleCount = parseInt(e.target.value, 10);
+    initParticles();
+  });
+  speedInput.addEventListener('input', (e) => {
+    speedMultiplier = parseInt(e.target.value, 10) / 10;
+  });
+})();
+</script>
+
+</body>
+</html>

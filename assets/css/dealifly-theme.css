@@ -1,0 +1,636 @@
+@charset "UTF-8";
+3: /*--------------------------------------------------------------------
+
+Dealifly premium visual language
+Loaded after style.css. Preserves structure; reduces saturation/glow.
+--------------------------------------------------------------------*/
+8: :root {
+
+--bg: #050507;
+--bg-secondary: #09090d;
+--surface: #0d0d12;
+--surface-hover: #111117;
+--text-primary: #f5f5f7;
+--text-secondary: #b7b7c2;
+--text-muted: #8a8a96;
+--border: rgba(255, 255, 255, 0.08);
+--border-hover: rgba(255, 255, 255, 0.14);
+--purple: #7657d9;
+--purple-soft: #8f7ae8;
+--pink: #d85acf;
+--pink-soft: #c97bc8;
+--lavender: #b7a5f5;
+--brand-atmosphere: linear-gradient(135deg, rgba(118, 87, 217, 0.18), rgba(216, 90, 207, 0.08));
+--cta-fill: linear-gradient(135deg, #7657d9 0%, #6a4cc4 100%);
+--glow-soft: 0 10px 28px rgba(118, 87, 217, 0.14);
+--radius-sm: 0.5rem;
+--radius-md: 0.875rem;
+--radius-lg: 1rem;
+--container-max: 72.5rem;
+31:     --dark-saas: #050507;
+
+--dark-saas-rgb: 5, 5, 7;
+--h1: clamp(2.5rem, 3.4vw + 0.7rem, 4.65rem);
+--h2: clamp(2rem, 2.6vw + 0.7rem, 3.4rem);
+--h3: clamp(1.55rem, 1.7vw + 0.7rem, 2.35rem);
+--h4: clamp(1.25rem, 1.1vw + 0.7rem, 1.75rem);
+--p: clamp(0.9375rem, 0.35vw + 0.85rem, 1.0625rem);
+39:     --bs-primary: #7657d9;
+
+--bs-primary-rgb: 118, 87, 217;
+--bs-secondary: #8f7ae8;
+--bs-secondary-rgb: 143, 122, 232;
+--bs-link-color: #8f7ae8;
+--bs-link-color-rgb: 143, 122, 232;
+--bs-link-hover-color: #b7a5f5;
+--bs-link-hover-color-rgb: 183, 165, 245;
+--bs-primary-text-emphasis: #b7a5f5;
+--bs-primary-bg-subtle: rgba(118, 87, 217, 0.16);
+--bs-primary-border-subtle: rgba(118, 87, 217, 0.32);
+}
+52: html {
+
+background-color: var(--bg);
+}
+56: body.bg-dark-saas {
+
+background-color: var(--bg) !important;
+color: var(--text-secondary);
+}
+61: body.bg-dark-saas h1,
+
+body.bg-dark-saas h2,
+body.bg-dark-saas h3,
+body.bg-dark-saas h4,
+body.bg-dark-saas h5,
+body.bg-dark-saas h6,
+body.bg-dark-saas .h1,
+body.bg-dark-saas .h2,
+body.bg-dark-saas .h3 {
+color: var(--text-primary);
+font-weight: 600;
+letter-spacing: -0.035em;
+}
+75: body.bg-dark-saas p {
+
+color: var(--text-secondary);
+line-height: 1.7;
+}
+80: .container {
+
+max-width: var(--container-max);
+}
+84: .bg-dark-saas {
+
+background-color: var(--bg) !important;
+}
+88: .dealifly-accent,
+
+.hero-8 .business,
+[style*="color: #f54ff2"],
+[style*="color:#f54ff2"] {
+color: var(--pink-soft) !important;
+}
+95: .dealifly-section-kicker {
+
+color: var(--pink-soft) !important;
+letter-spacing: 0.14em;
+font-weight: 600;
+}
+101: /* Typography: selected highlight words stay muted brand, not neon */
+
+.text-clip--primary,
+.text-clip--primary-alt {
+background: linear-gradient(90deg, var(--text-primary) 8%, var(--lavender) 92%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+110: /* Buttons */
+
+.btn {
+--bs-btn-border-radius: var(--radius-sm);
+font-weight: 600;
+letter-spacing: -0.01em;
+transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+}
+118: .btn-primary {
+
+--bs-btn-color: #fff;
+--bs-btn-bg: #7657d9;
+--bs-btn-border-color: rgba(255, 255, 255, 0.12);
+--bs-btn-hover-color: #fff;
+--bs-btn-hover-bg: #8163e0;
+--bs-btn-hover-border-color: rgba(255, 255, 255, 0.18);
+--bs-btn-active-bg: #6a4cc4;
+--bs-btn-active-border-color: rgba(255, 255, 255, 0.18);
+box-shadow: none;
+}
+130: .btn-primary.rounded-pill,
+
+.navbar .btn-primary.rounded-pill {
+border-radius: 0.625rem !important;
+}
+135: .bg-gradient-linear,
+
+.btn.bg-gradient-linear {
+background-image: var(--cta-fill) !important;
+background-color: var(--purple) !important;
+border: 1px solid rgba(255, 255, 255, 0.12) !important;
+border-radius: var(--radius-sm) !important;
+box-shadow: none !important;
+color: #fff !important;
+}
+145: .btn-primary:hover,
+
+.btn.bg-gradient-linear:hover {
+transform: translateY(-1px);
+box-shadow: var(--glow-soft) !important;
+}
+151: .btn-outline-light,
+
+.btn-outline-primary {
+background: transparent;
+border-color: var(--border);
+color: var(--text-primary);
+}
+158: .btn-outline-primary {
+
+--bs-btn-color: var(--text-primary);
+--bs-btn-border-color: var(--border);
+--bs-btn-hover-color: #fff;
+--bs-btn-hover-bg: rgba(118, 87, 217, 0.18);
+--bs-btn-hover-border-color: var(--border-hover);
+}
+166: .btn-outline-light:hover,
+
+.btn-outline-primary:hover {
+transform: translateY(-1px);
+}
+171: .text-bg-primary {
+
+background-color: var(--purple) !important;
+color: #fff !important;
+}
+176: /* Navbar */
+
+.primary-header {
+background-color: rgba(5, 5, 7, 0.78) !important;
+border-bottom: 1px solid var(--border);
+-webkit-backdrop-filter: blur(18px);
+backdrop-filter: blur(18px);
+box-shadow: none !important;
+}
+185: .primary-header .container {
+
+padding-inline: clamp(1rem, 3vw, 1.75rem);
+}
+189: .primary-header .nav-link {
+
+color: var(--text-primary) !important;
+font-weight: 500;
+}
+194: .primary-header .nav-link.active {
+
+color: var(--purple-soft) !important;
+}
+198: .primary-header .nav-link:hover {
+
+color: var(--lavender) !important;
+}
+202: .primary-header--dark.primary-header--boxed > .container {
+
+background-color: rgba(13, 13, 18, 0.92) !important;
+border: 1px solid var(--border);
+box-shadow: none;
+}
+208: .primary-header--dark .nav-link.active,
+
+.primary-header--transparent-light-alt .nav-link.active,
+.primary-header-crossed .primary-header--transparent-light-alt .nav-link.active {
+color: var(--purple-soft) !important;
+}
+214: .primary-header-crossed .primary-header--transparent-light-alt:not(.primary-header--boxed) {
+
+background-color: rgba(5, 5, 7, 0.92) !important;
+color: var(--text-primary) !important;
+}
+219: .navigation-1__menu,
+
+.navigation-0__menu {
+background-color: var(--surface) !important;
+border: 1px solid var(--border);
+box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+226: .navigation-1__menu-link,
+
+.navigation-0__menu-link {
+color: var(--text-secondary) !important;
+}
+231: .navigation-1__menu-link:hover,
+
+.navigation-0__menu-link:hover {
+background-color: var(--surface-hover) !important;
+color: var(--text-primary) !important;
+}
+237: .dealifly-nav-logo__name {
+
+color: var(--text-primary);
+}
+241: .primary-header--transparent-light-alt .navbar-collapse {
+
+background-color: rgba(13, 13, 18, 0.98);
+border-color: var(--border);
+box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+247: @media (min-width: 992px) {
+
+.primary-header--transparent-light-alt .navbar-collapse {
+background-color: transparent;
+border: 0;
+box-shadow: none;
+}
+}
+255: /* Hero */
+
+.hero-8 {
+background-color: var(--bg);
+}
+260: .hero-8::after {
+
+background:
+radial-gradient(ellipse 80% 55% at 50% -10%, rgba(118, 87, 217, 0.16), transparent 58%),
+radial-gradient(ellipse 45% 40% at 88% 18%, rgba(216, 90, 207, 0.08), transparent 55%),
+linear-gradient(180deg, rgba(5, 5, 7, 0.55) 0%, rgba(5, 5, 7, 0.18) 38%, #050507 100%);
+}
+267: .hero-8__backdrop-video {
+
+filter: saturate(0.45) contrast(1.02) brightness(0.42);
+opacity: 0.42;
+}
+272: .hero-8__content {
+
+padding-block-start: clamp(7rem, 9vw + 1.25rem, 10rem);
+padding-block-end: clamp(2.5rem, 4vw, 4.25rem);
+}
+277: .hero-8 h1 {
+
+color: var(--text-primary);
+font-weight: 600;
+letter-spacing: -0.045em;
+line-height: 1.08;
+margin-bottom: 1.75rem !important;
+}
+285: .hero-8 h1 .business {
+
+color: var(--lavender) !important;
+font-weight: 600;
+}
+290: .hero-8 p {
+
+color: var(--text-secondary) !important;
+max-width: 38rem;
+line-height: 1.75;
+}
+296: .hero-8__showcase {
+
+border: 1px solid var(--border);
+border-radius: var(--radius-lg);
+box-shadow: 0 24px 48px rgba(0, 0, 0, 0.32);
+}
+302: .hero-8__visual img {
+
+filter: saturate(0.86) contrast(1.02);
+}
+306: .hero-8 .badge {
+
+background-color: var(--purple) !important;
+box-shadow: none;
+}
+311: .hero-8 .bg-dark {
+
+background-color: var(--surface) !important;
+border: 1px solid var(--border);
+}
+316: /* Cards */
+
+.feature-card-1,
+.price-card-1,
+.folder-card-1,
+.dealifly-case-card,
+.dealifly-service-route-card,
+.dealifly-metric-card,
+.dealifly-content-panel,
+.dealifly-sidebar-panel,
+.dealifly-insight-card,
+.dealifly-benefit-card,
+.dealifly-phase-card,
+.dealifly-process-step,
+.dealifly-takeaway,
+.dealifly-impact-note {
+background-color: var(--surface);
+border: 1px solid var(--border);
+box-shadow: none;
+}
+336: .feature-card-1 {
+
+background-image: linear-gradient(180deg, rgba(118, 87, 217, 0.08) 0%, rgba(13, 13, 18, 0.92) 72%) !important;
+border-radius: var(--radius-lg);
+}
+341: .folder-card-1 {
+
+--folder-card-bg: rgba(13, 13, 18, 0.88);
+border-radius: var(--radius-lg);
+}
+346: .dealifly-case-card,
+
+.dealifly-service-route-card,
+.dealifly-content-panel,
+.dealifly-sidebar-panel,
+.dealifly-insight-card,
+.dealifly-metric-card,
+.dealifly-phase-card {
+background: var(--surface) !important;
+border-color: var(--border) !important;
+border-radius: 1rem;
+}
+358: .dealifly-case-card:hover,
+
+.dealifly-service-route-card:hover,
+.dealifly-insight-card:hover,
+.dealifly-metric-card:hover,
+.feature-card-1:hover {
+transform: translateY(-4px);
+border-color: var(--border-hover) !important;
+background-color: var(--surface-hover) !important;
+box-shadow: none;
+}
+369: .gradient-border--surface-dark-alt,
+
+.gradient-border--surface-dark-emphasis {
+--surface-color: var(--surface);
+--border-color-top: rgba(255, 255, 255, 0.1);
+--border-color-bottom: rgba(118, 87, 217, 0.18);
+}
+376: .gradient-border::before {
+
+opacity: 0.45;
+}
+380: /* Glow reductions */
+
+.preloader__brand {
+background: rgba(13, 13, 18, 0.72);
+border-color: var(--border);
+box-shadow: inset 0 0 1.5rem rgba(118, 87, 217, 0.06), 0 0 1.75rem rgba(118, 87, 217, 0.08);
+}
+387: .preloader__orbit {
+
+border-color: rgba(143, 122, 232, 0.28);
+}
+391: .preloader__orbit::after {
+
+background: var(--purple-soft);
+box-shadow: 0 0 0.45rem rgba(118, 87, 217, 0.28);
+}
+396: .pulser__content {
+
+background-image: var(--cta-fill);
+box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 1.1rem rgba(118, 87, 217, 0.16);
+}
+401: .dealifly-process-section::before {
+
+background: rgba(118, 87, 217, 0.08);
+filter: blur(5.5rem);
+}
+406: .dealifly-process-section__panel {
+
+background: var(--surface);
+border-color: var(--border);
+box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+412: .dealifly-process-section__video {
+
+border-color: var(--border);
+box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+417: .dealifly-route-hero {
+
+background:
+radial-gradient(circle at 18% 12%, rgba(118, 87, 217, 0.12), transparent 26rem),
+radial-gradient(circle at 86% 88%, rgba(216, 90, 207, 0.06), transparent 24rem),
+var(--bg);
+border-bottom-color: var(--border);
+}
+425: .dealifly-listing-section {
+
+background: var(--bg);
+}
+429: .dealifly-listing-section--muted {
+
+background: var(--bg-secondary);
+}
+433: .dealifly-page {
+
+--dealifly-surface: var(--surface);
+--dealifly-surface-strong: var(--surface-hover);
+--dealifly-line: var(--border);
+--dealifly-copy: var(--text-secondary);
+--dealifly-muted: var(--text-muted);
+--dealifly-accent-soft: var(--lavender);
+background: var(--bg);
+}
+443: .dealifly-eyebrow-pill {
+
+background: rgba(118, 87, 217, 0.1);
+border-color: rgba(183, 165, 245, 0.22);
+color: var(--lavender);
+}
+449: .dealifly-eyebrow-pill__dot {
+
+background: var(--purple-soft);
+box-shadow: none;
+}
+454: .dealifly-service-cta {
+
+border-color: var(--border);
+background: var(--surface);
+box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+460: .cta-6 {
+
+background:
+radial-gradient(ellipse 70% 80% at 50% 120%, rgba(118, 87, 217, 0.18), transparent 58%),
+var(--surface) !important;
+border-color: var(--border) !important;
+}
+467: .cta-6 svg {
+
+opacity: 0.28;
+}
+471: .platform-card-1 {
+
+background-image: var(--brand-atmosphere), url("../img/shapes/card-bg-1.png");
+}
+475: .bg-gradient-1 {
+
+background-image: linear-gradient(180deg, #8f7ae8 0%, #7657d9 100%) !important;
+}
+479: /* Sections & spacing */
+
+.section-space-y {
+padding-block-start: clamp(4.25rem, 7.4vw + 1rem, 8.5rem);
+padding-block-end: clamp(4.25rem, 7.4vw + 1rem, 8.5rem);
+}
+485: .section-space-top {
+
+padding-block-start: clamp(4.25rem, 7.4vw + 1rem, 8.5rem);
+}
+489: .dealifly-specialized-services,
+
+.dealifly-planning-section,
+.dealifly-process-section,
+.dealifly-reviews-section,
+.dealifly-reasons-section {
+padding-block-start: clamp(4rem, 6.8vw + 1rem, 8rem);
+padding-block-end: clamp(4rem, 6.8vw + 1rem, 8rem);
+}
+498: .dealifly-core-service-visual {
+
+border: 1px solid var(--border);
+box-shadow: none;
+}
+503: .dealifly-detail-media {
+
+border: 1px solid var(--border);
+border-radius: var(--radius-lg);
+overflow: hidden;
+background: var(--surface);
+}
+510: .dealifly-theme-page {
+
+--bs-dark: #09090d;
+--bs-dark-rgb: 9, 9, 13;
+}
+515: .dealifly-theme-page main[data-bs-theme="dark"] {
+
+--bs-body-bg: var(--surface);
+--bs-body-bg-rgb: 13, 13, 18;
+--bs-secondary-bg: var(--bg-secondary);
+--bs-secondary-bg-rgb: 9, 9, 13;
+--bs-tertiary-bg: var(--bg);
+--bs-tertiary-bg-rgb: 5, 5, 7;
+--bs-dark-bg-subtle: #0d0d12;
+--bs-dark-border-subtle: rgba(255, 255, 255, 0.1);
+--bs-border-color: var(--border);
+--bs-border-color-translucent: var(--border);
+--bs-heading-color: var(--text-primary);
+}
+529: .dealifly-pricing-page .dealifly-pricing {
+
+background:
+radial-gradient(circle at 14% 12%, rgba(118, 87, 217, 0.1), transparent 26rem),
+radial-gradient(circle at 88% 78%, rgba(216, 90, 207, 0.05), transparent 28rem),
+var(--bg);
+}
+536: .dealifly-pricing-page .dealifly-pricing-card,
+
+.dealifly-pricing-page .dealifly-specialized-plan {
+background: var(--surface);
+border-color: var(--border);
+box-shadow: none;
+}
+543: .dealifly-pricing-page .dealifly-pricing-card--featured {
+
+border-color: rgba(143, 122, 232, 0.32);
+background: radial-gradient(circle at 50% 0, rgba(118, 87, 217, 0.12), transparent 16rem), var(--surface);
+}
+548: .dealifly-pricing-page .dealifly-pricing-card::before {
+
+background: linear-gradient(90deg, transparent, rgba(183, 165, 245, 0.35), transparent);
+}
+552: .dealifly-pricing-page .dealifly-additional-services,
+
+.dealifly-pricing-page .dealifly-specialized-pricing {
+background: var(--bg-secondary);
+}
+557: .dealifly-pricing-page .dealifly-additional-services__group {
+
+background: var(--surface);
+border-color: var(--border);
+}
+562: .dealifly-pricing-page .dealifly-specialized-plan::before {
+
+opacity: 0.55;
+}
+566: .dealifly-footer {
+
+background: var(--bg-secondary);
+border-top: 1px solid var(--border);
+}
+571: .form-control,
+
+.form-select {
+background-color: var(--surface);
+border-color: var(--border);
+color: var(--text-primary);
+}
+578: .form-control:focus,
+
+.form-select:focus {
+border-color: rgba(143, 122, 232, 0.45);
+box-shadow: 0 0 0 0.2rem rgba(118, 87, 217, 0.12);
+}
+584: .accordion-item,
+
+.dealifly-faq .accordion-item {
+background: var(--surface);
+border-color: var(--border);
+}
+590: .dealifly-faq .accordion-button:not(.collapsed) {
+
+color: var(--text-primary);
+background: var(--surface-hover);
+}
+595: .dealifly-arrow-label {
+
+color: var(--lavender);
+}
+599: .dealifly-specialized-service-nav .btn.active,
+
+.dealifly-specialized-service-nav .btn[aria-selected="true"] {
+background-color: rgba(118, 87, 217, 0.18) !important;
+border-color: rgba(143, 122, 232, 0.35) !important;
+color: var(--text-primary) !important;
+}
+606: @media (max-width: 767.98px) {
+
+.hero-8 h1 {
+line-height: 1.12;
+}
+611:     .hero-8__content {
+
+padding-block-start: 6.25rem;
+}
+615:     .primary-header .btn-primary {
+
+width: 100%;
+justify-content: center;
+}
+620:     .section-space-y,
+
+.dealifly-specialized-services,
+.dealifly-planning-section,
+.dealifly-process-section,
+.dealifly-reviews-section,
+.dealifly-reasons-section {
+padding-block-start: 3.5rem;
+padding-block-end: 3.5rem;
+}
+}
+631: @media (min-width: 768px) and (max-width: 991.98px) {
+
+.hero-8 h1 {
+max-width: 16ch;
+margin-inline: auto;
+}
+}
