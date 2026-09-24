@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light" data-theme="home-7">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional brand storytelling service to create case studies, client presentations, and company brochures that build trust, improve conversions, and close more deals.">
-    <meta name="keywords" content="case study writing service, business case studies, client success stories, pitch deck design service, sales presentation design, company brochure design, brand storytelling service, marketing collateral design, B2B case studies, sales enablement materials">
+    <meta name="description" content="Brand storytelling, B2B case studies, pitch decks, and sales collateral that prove value, build enterprise trust, and accelerate closed-won deals.">
+    <meta name="keywords" content="Dealifly, brand storytelling, case studies, pitch decks, sales collateral, B2B sales enablement, client presentations">
     <meta name="author" content="Dealifly">
-    <title>Brand Storytelling Service | Case Studies, Pitch Decks &amp; Brochures</title>
+    <title>Brand Storytelling &amp; Sales Enablement | Case Studies &amp; Decks | Dealifly</title>
     <link rel="icon" href="assets/img/dealifly-logo.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/img/dealifly-logo.png">
     <link rel="stylesheet" href="assets/css/bootstrap.css?v=5b2dea53fa53">
@@ -16,58 +16,102 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/ff-1.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/ff-2.css?v=5b2dea53fa53">
-    <link rel="stylesheet" href="assets/css/prism.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/style.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/dealifly-theme.css?v=20260920">
+    <link rel="stylesheet" href="assets/css/dealifly-home-refinement.css?v=20260921">
+    <link rel="stylesheet" href="assets/css/dealifly-solutions.css?v=20260924">
 </head>
 
-<body class="bg-dark-saas">
-    <nav class="navbar navbar-expand-lg primary-header primary-header--transparent-light-alt primary-header--fixed top-0 primary-header-crossed:top-0">
+<body class="bg-dark-saas dealifly-homepage dealifly-solutions-page">
+    <!-- Floating Navbar -->
+    <nav class="navbar navbar-expand-lg primary-header primary-header--transparent-light-alt dealifly-floating-nav">
         <div class="container align-items-lg-center">
             <a class="logo dealifly-nav-logo" href="index.html" aria-label="Dealifly home">
                 <img src="assets/img/dealifly-logo.png" alt="" class="dealifly-nav-logo__mark" width="40" height="40">
                 <span class="dealifly-nav-logo__name">Dealifly</span>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar0" aria-controls="navbar0" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar0"
+                aria-controls="navbar0" aria-expanded="false" aria-label="Toggle navigation">
                 <iconify-icon icon="solar:hamburger-menu-line-duotone"></iconify-icon>
             </button>
             <div class="collapse navbar-collapse" id="navbar0">
                 <ul class="navbar-nav flex-grow-1 justify-content-center mx-lg-4 mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"> Home </a>
-                    </li>
-                    <li class="nav-item has-sub-menu navigation-1">
-                        <a class="nav-link" href="service.html">Services</a>
-                        <ul class="navigation-1__menu">
+                    <li class="nav-item has-sub-menu navigation-1 dealifly-nav-dropdown">
+                        <a class="nav-link active" href="service.html">
+                            Solutions <i class="bi bi-chevron-down dealifly-nav-caret ms-1"></i>
+                        </a>
+                        <ul class="navigation-1__menu dealifly-dropdown-menu dealifly-dropdown-menu--solutions">
                             <li class="navigation-1__menu-list">
-                                <a href="company-growth-marketing.html" class="link navigation-1__menu-link"> B2B Growth Marketing </a>
+                                <a href="company-growth-marketing.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">B2B Growth Marketing</span>
+                                    <span class="dealifly-drop-sub">Acquisition &amp; outbound funnels</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="linkedin-personal-branding.html" class="link navigation-1__menu-link"> Personal Brand Building </a>
+                                <a href="ecommerce-growth-marketing.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">E-commerce Growth Marketing</span>
+                                    <span class="dealifly-drop-sub">Paid media &amp; scale strategy</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="ecommerce-growth-marketing.html" class="link navigation-1__menu-link"> E-commerce Growth Marketing </a>
+                                <a href="linkedin-lead-generation.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">LinkedIn Lead Generation</span>
+                                    <span class="dealifly-drop-sub">High-intent pipeline generation</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="linkedin-lead-generation.html" class="link navigation-1__menu-link"> LinkedIn Lead Generation </a>
+                                <a href="email-marketing-outreach.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">Email Marketing Outreach</span>
+                                    <span class="dealifly-drop-sub">Cold outreach &amp; lifecycle sequences</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="email-marketing-outreach.html" class="link navigation-1__menu-link"> Email Marketing Outreach </a>
+                                <a href="lead-research.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">Lead Research &amp; Data</span>
+                                    <span class="dealifly-drop-sub">ICP enrichment &amp; verification</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="lead-research.html" class="link navigation-1__menu-link"> Lead Research </a>
+                                <a href="seo-geo.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">SEO &amp; GEO</span>
+                                    <span class="dealifly-drop-sub">Organic search &amp; AI discovery</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="seo-geo.html" class="link navigation-1__menu-link"> SEO &amp; GEO </a>
+                                <a href="content-marketing.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">Content Marketing</span>
+                                    <span class="dealifly-drop-sub">Demand gen &amp; thought leadership</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="content-marketing.html" class="link navigation-1__menu-link"> Content Marketing </a>
+                                <a href="linkedin-personal-branding.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">Personal Brand Building</span>
+                                    <span class="dealifly-drop-sub">Executive presence &amp; authority</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="brand-identity.html" class="link navigation-1__menu-link"> Brand Identity </a>
+                                <a href="brand-identity.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">Brand Identity</span>
+                                    <span class="dealifly-drop-sub">Design systems &amp; visual positioning</span>
+                                </a>
                             </li>
                             <li class="navigation-1__menu-list">
-                                <a href="brand-storytelling.html" class="link navigation-1__menu-link"> Brand Storytelling </a>
+                                <a href="brand-storytelling.html" class="link navigation-1__menu-link">
+                                    <span class="dealifly-drop-title">Brand Storytelling</span>
+                                    <span class="dealifly-drop-sub">Narrative &amp; high-converting messaging</span>
+                                </a>
+                            </li>
+                            <li class="navigation-1__menu-list dealifly-dropdown-footer">
+                                <a href="service.html" class="link navigation-1__menu-link dealifly-drop-all">
+                                    <span>All Services &amp; Frameworks</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="navigation-1__menu-list dealifly-dropdown-footer">
+                                <a href="pricing.html" class="link navigation-1__menu-link dealifly-drop-all">
+                                    <span>Pricing &amp; Growth Plans</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -75,362 +119,509 @@
                         <a class="nav-link" href="pricing.html">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="case-study.html">Case Studies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="case-study.html">Case Studies</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3 ms-lg-auto">
-                    <a href="contact.html" class="btn btn-sm btn-primary order-lg-2  text-light fw-medium rounded-pill "> Get Started </a>
+                    <a href="contact.html" class="btn btn-sm btn-primary order-lg-2">Get Started</a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="preloader" role="status" aria-label="Loading Dealifly">
-        <div class="preloader__content">
-            <div class="preloader__brand">
-                <span class="preloader__orbit" aria-hidden="true"></span>
-                <img src="assets/img/dealifly-logo.png" alt="" class="preloader__img">
+
+    <!-- Main Content -->
+    <main>
+        <!-- Solution Hero -->
+        <section class="dealifly-solution-hero">
+            <canvas id="solutionHeroCanvas" class="dealifly-solution-hero__canvas"></canvas>
+            <div class="container text-center text-lg-start">
+                <div class="dealifly-solution-breadcrumbs justify-content-center justify-content-lg-start">
+                    <a href="index.html">Home</a>
+                    <span class="sep">/</span>
+                    <a href="service.html">Solutions</a>
+                    <span class="sep">/</span>
+                    <span class="current">Brand Storytelling</span>
+                </div>
+                <div class="dealifly-solution-badge">
+                    <span class="dealifly-solution-badge__dot"></span> Commercial Narrative &amp; Sales Enablement Engine
+                </div>
+                <h1 class="dealifly-solution-title">
+                    Brand Storytelling &amp; <span class="highlight">Collateral</span>
+                </h1>
+                <p class="dealifly-solution-lede">
+                    Turn client outcomes into undeniable proof that closes enterprise deals. We research, write, and design high-conviction case studies, board-level pitch decks, and sales enablement collateral that dramatically accelerate sales velocity.
+                </p>
+                <div class="dealifly-solution-hero-actions justify-content-center justify-content-lg-start">
+                    <a href="contact.html" class="dealifly-btn-primary">
+                        Build Sales Collateral Plan <i class="bi bi-arrow-right-short fs-5"></i>
+                    </a>
+                    <a href="#architecture-console" class="dealifly-btn-secondary">
+                        View Narrative Engine <i class="bi bi-cpu"></i>
+                    </a>
+                </div>
+
+                <!-- Stats Strip -->
+                <div class="dealifly-solution-stats-strip">
+                    <div class="dealifly-solution-stat-item">
+                        <strong>35%</strong>
+                        <span>Faster Sales Cycles</span>
+                    </div>
+                    <div class="dealifly-solution-stat-item">
+                        <strong>2.4x</strong>
+                        <span>Proposal Win Rate Lift</span>
+                    </div>
+                    <div class="dealifly-solution-stat-item">
+                        <strong>Board-Ready</strong>
+                        <span>Executive Quality</span>
+                    </div>
+                    <div class="dealifly-solution-stat-item">
+                        <strong>100%</strong>
+                        <span>Data-Backed Proof Points</span>
+                    </div>
+                </div>
             </div>
-            <span class="preloader__label">Dealifly</span>
-        </div>
-    </div>
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
-            <main class="dealifly-page">
-                <section class="dealifly-route-hero dealifly-route-hero--detail dealifly-route-hero--service">
-                    <div class="container position-relative">
-                        <nav aria-label="Breadcrumb" class="dealifly-breadcrumb">
-                            <a href="index.html">Home</a>
-                            <span aria-hidden="true">/</span>
-                            <a href="service.html">Services</a>
-                            <span aria-hidden="true">/</span>
-                            <span aria-current="page">Brand Storytelling</span>
-                        </nav>
-                        <div class="row g-5 align-items-end">
-                            <div class="col-xl-9">
-                                <span class="dealifly-eyebrow-pill">
-                                    <span class="dealifly-eyebrow-pill__dot" aria-hidden="true"></span> Specialized service </span>
-                                <h1 class="dealifly-route-hero__title">Brand Storytelling</h1>
-                                <p class="dealifly-route-hero__lede dealifly-route-hero__lede--wide">Case studies, pitch decks, brochures, and sales collateral that prove value.</p>
+        </section>
+
+        <!-- Interactive Architecture Console (Zero AI Images) -->
+        <section class="dealifly-solution-console-section" id="architecture-console">
+            <div class="container">
+                <div class="dealifly-solution-console">
+                    <div class="dealifly-console-header">
+                        <div class="dealifly-console-left">
+                            <div class="dealifly-console-dots">
+                                <span></span><span></span><span></span>
                             </div>
+                            <div class="dealifly-console-title">
+                                dealifly://narrative/commercial-storytelling.sys
+                            </div>
+                            <span class="dealifly-console-badge-live">SALES ENABLEMENT ACTIVE</span>
+                        </div>
+                        <div class="dealifly-console-metrics">
+                            <span>Format: <strong>Figma + Deck + PDF</strong></span>
+                            <span>Validation: <strong>Verified Client ROI Metrics</strong></span>
                         </div>
                     </div>
-                </section>
-                <section class="dealifly-detail-media-section">
-                    <div class="container">
-                        <figure class="dealifly-detail-media dealifly-detail-media--service">
-                            <img src="assets/img/dealifly/service-social-media-marketing.png" alt="Social media marketing dashboard and growth strategy" loading="eager" decoding="async">
-                        </figure>
+                    <div class="dealifly-console-body">
+                        <!-- Clean Interactive Architecture SVG -->
+                        <svg class="dealifly-arch-svg" viewBox="0 0 960 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Grid Lines -->
+                            <line x1="40" y1="130" x2="920" y2="130" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="4 4" />
+                            <line class="arch-beam-flow" x1="40" y1="130" x2="920" y2="130" stroke="rgba(155,130,232,0.4)" stroke-width="2" />
+
+                            <!-- Node 1: Proof Extraction -->
+                            <g class="arch-node" transform="translate(40, 60)">
+                                <rect width="180" height="140" rx="12" fill="rgba(18,18,26,0.9)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(118,87,217,0.15)" stroke="rgba(155,130,232,0.3)" />
+                                <text x="23" y="38" fill="#9B82E8" font-size="16" font-family="monospace">01</text>
+                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Proof Mining</text>
+                                <text x="56" y="44" fill="rgba(255,255,255,0.5)" font-size="10.5">Raw Client Data</text>
+                                <line x1="14" y1="62" x2="166" y2="62" stroke="rgba(255,255,255,0.08)" />
+                                <text x="14" y="82" fill="rgba(255,255,255,0.7)" font-size="10.5">• Stakeholder Interviews</text>
+                                <text x="14" y="102" fill="rgba(255,255,255,0.7)" font-size="10.5">• Hard Revenue &amp; ROI Metrics</text>
+                                <text x="14" y="122" fill="rgba(255,255,255,0.7)" font-size="10.5">• Direct Customer Quotes</text>
+                            </g>
+
+                            <!-- Node 2: Narrative Arc & Framing -->
+                            <g class="arch-node" transform="translate(270, 60)">
+                                <rect width="180" height="140" rx="12" fill="rgba(18,18,26,0.9)" stroke="rgba(155,130,232,0.35)" stroke-width="1.2" />
+                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(118,87,217,0.25)" stroke="#9B82E8" />
+                                <text x="23" y="38" fill="#FFFFFF" font-size="16" font-family="monospace">02</text>
+                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Narrative Arc</text>
+                                <text x="56" y="44" fill="rgba(255,255,255,0.5)" font-size="10.5">Commercial Clarity</text>
+                                <line x1="14" y1="62" x2="166" y2="62" stroke="rgba(255,255,255,0.08)" />
+                                <text x="14" y="82" fill="rgba(255,255,255,0.7)" font-size="10.5">• The Cost of Inaction</text>
+                                <text x="14" y="102" fill="rgba(255,255,255,0.7)" font-size="10.5">• Architectural Breakdown</text>
+                                <text x="14" y="122" fill="rgba(255,255,255,0.7)" font-size="10.5">• Transformation Proof</text>
+                            </g>
+
+                            <!-- Node 3: Collateral Crafting -->
+                            <g class="arch-node" transform="translate(500, 60)">
+                                <rect width="180" height="140" rx="12" fill="rgba(18,18,26,0.9)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(118,87,217,0.15)" stroke="rgba(155,130,232,0.3)" />
+                                <text x="23" y="38" fill="#9B82E8" font-size="16" font-family="monospace">03</text>
+                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Executive Decks</text>
+                                <text x="56" y="44" fill="rgba(255,255,255,0.5)" font-size="10.5">High Polish</text>
+                                <line x1="14" y1="62" x2="166" y2="62" stroke="rgba(255,255,255,0.08)" />
+                                <text x="14" y="82" fill="rgba(255,255,255,0.7)" font-size="10.5">• 1-Page Case Study PDF</text>
+                                <text x="14" y="102" fill="rgba(255,255,255,0.7)" font-size="10.5">• Board &amp; Proposal Decks</text>
+                                <text x="14" y="122" fill="rgba(255,255,255,0.7)" font-size="10.5">• Sales Battlecards</text>
+                            </g>
+
+                            <!-- Node 4: Deal Acceleration -->
+                            <g class="arch-node" transform="translate(730, 60)">
+                                <rect width="190" height="140" rx="12" fill="rgba(24,20,38,0.95)" stroke="rgba(67,201,139,0.4)" stroke-width="1.5" />
+                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(67,201,139,0.15)" stroke="#43C98B" />
+                                <text x="23" y="38" fill="#43C98B" font-size="16" font-family="monospace">04</text>
+                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Deal Velocity</text>
+                                <text x="56" y="44" fill="#43C98B" font-size="10.5">Closed-Won Deals</text>
+                                <line x1="14" y1="62" x2="176" y2="62" stroke="rgba(255,255,255,0.08)" />
+                                <text x="14" y="82" fill="#FFFFFF" font-size="10.5">• Removed Buyer Hesitation</text>
+                                <text x="14" y="102" fill="#FFFFFF" font-size="10.5">• Faster Procurement Sign-Off</text>
+                                <text x="14" y="122" fill="#43C98B" font-size="10.5">✓ 35% Faster Sales Cycle</text>
+                            </g>
+                        </svg>
                     </div>
-                </section>
-                <section class="dealifly-detail-section section-space-y">
-                    <div class="container">
-                        <div class="row g-5 g-xl-8 align-items-start">
-                            <div class="col-lg-4 col-xl-3">
-                                <aside class="dealifly-detail-sidebar">
-                                    <a class="dealifly-back-link" href="service.html">
-                                        <iconify-icon icon="solar:arrow-left-linear" aria-hidden="true"></iconify-icon> All services </a>
-                                    <div class="dealifly-sidebar-panel">
-                                        <p class="dealifly-sidebar-panel__title">Core services</p>
-                                        <ul class="dealifly-sidebar-links dealifly-sidebar-links--compact">
-                                            <li><a href="company-growth-marketing.html">Company Growth Marketing</a></li>
-                                            <li><a href="ecommerce-growth-marketing.html">Ecommerce Growth Marketing</a></li>
-                                            <li><a href="linkedin-personal-branding.html">LinkedIn Personal Branding</a></li>
-                                        </ul>
-                                        <p class="dealifly-sidebar-panel__title dealifly-sidebar-panel__title--spaced">Specialized services</p>
-                                        <ul class="dealifly-sidebar-links dealifly-sidebar-links--compact">
-                                            <li><a href="linkedin-lead-generation.html">LinkedIn Lead Generation</a></li>
-                                            <li><a href="email-marketing-outreach.html">Email Marketing Outreach</a></li>
-                                            <li><a href="lead-research.html">Lead Research</a></li>
-                                            <li><a href="seo-geo.html">SEO &amp; GEO</a></li>
-                                            <li><a href="content-marketing.html">Content Marketing</a></li>
-                                            <li><a href="brand-identity.html">Brand Identity</a></li>
-                                            <li><a href="brand-storytelling.html" aria-current="page">Brand Storytelling</a></li>
-                                        </ul>
-                                    </div>
-                                </aside>
-                            </div>
-                            <div class="col-lg-8 col-xl-9">
-                                <div class="dealifly-content-stack">
-                                    <section class="dealifly-content-panel">
-                                        <p class="dealifly-section-kicker">Service overview</p>
-                                        <h2>Brand Storytelling: Case Studies, Decks &amp; Brochures</h2>
-                                        <p>We help businesses turn results into powerful stories that sell. Our Brand Storytelling service creates high-impact case studies, client presentations, and company brochures that showcase your value, build trust, and convert prospects into clients.</p>
-                                        <p>Instead of just listing what you do, we help you communicate why you win—through structured, persuasive, and visually compelling business storytelling assets. Most businesses struggle to convert because they fail to communicate their value clearly. Strong storytelling bridges that gap. Case studies, presentations, and brochures help you build authority, increase trust, and shorten your sales cycle.</p>
-                                    </section>
-                                    <section class="dealifly-content-panel dealifly-content-panel--flush" aria-labelledby="service-capabilities-brand-storytelling">
-                                        <div class="dealifly-content-panel__heading">
-                                            <p class="dealifly-section-kicker">What this service delivers</p>
-                                            <h2 id="service-capabilities-brand-storytelling">Core Capabilities</h2>
-                                        </div>
-                                        <div class="dealifly-benefit-grid">
-                                            <article class="dealifly-benefit-card">
-                                                <span>01</span>
-                                                <h3>Case Studies That Build Trust &amp; Close Deals</h3>
-                                                <p>We turn your client results into professional case studies that highlight real outcomes, measurable impact, and transformation. These are designed to remove doubt and help prospects confidently choose your business.</p>
-                                            </article>
-                                            <article class="dealifly-benefit-card">
-                                                <span>02</span>
-                                                <h3>Client Presentations &amp; Pitch Decks</h3>
-                                                <p>We create persuasive client presentations that clearly explain your offer, process, and value. Whether it’s for sales meetings, proposals, or investor pitches, every slide is structured to guide decision-making and increase conversions.</p>
-                                            </article>
-                                            <article class="dealifly-benefit-card">
-                                                <span>03</span>
-                                                <h3>Company Brochures &amp; Brand Collateral</h3>
-                                                <p>We design and write professional company brochures that communicate your services, positioning, and credibility in a clear and compelling way. Perfect for sharing with prospects, partners, and stakeholders.</p>
-                                            </article>
-                                            <article class="dealifly-benefit-card">
-                                                <span>04</span>
-                                                <h3>Strategic Brand Storytelling</h3>
-                                                <p>We don’t just design documents—we build narratives. Every asset is crafted to position your business as the obvious choice by highlighting results, trust, and differentiation in your market.</p>
-                                            </article>
-                                        </div>
-                                    </section>
-                                    <section class="dealifly-content-panel" aria-labelledby="service-process-brand-storytelling">
-                                        <p class="dealifly-section-kicker">How it works</p>
-                                        <h2 id="service-process-brand-storytelling">How It Works</h2>
-                                        <div class="dealifly-process-list">
-                                            <article class="dealifly-process-step">
-                                                <div class="dealifly-process-step__number">01</div>
-                                                <div>
-                                                    <h3>Discovery &amp; Information Gathering</h3>
-                                                    <p>We understand your business, clients, results, and positioning to identify the strongest stories and proof points.</p>
-                                                </div>
-                                            </article>
-                                            <article class="dealifly-process-step">
-                                                <div class="dealifly-process-step__number">02</div>
-                                                <div>
-                                                    <h3>Content Creation &amp; Design</h3>
-                                                    <p>We transform raw information into structured case studies, persuasive presentations, and professional brochures with clear messaging and strong visuals.</p>
-                                                </div>
-                                            </article>
-                                            <article class="dealifly-process-step">
-                                                <div class="dealifly-process-step__number">03</div>
-                                                <div>
-                                                    <h3>Refinement &amp; Final Delivery</h3>
-                                                    <p>We refine every asset for clarity, impact, and conversion ensuring your materials are ready to use in sales calls, pitches, and marketing campaigns.</p>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </section>
-                                    <section class="dealifly-service-cta" aria-labelledby="service-cta-brand-storytelling">
-                                        <img src="assets/img/dealifly/service-linkedin-outreach.png" alt="LinkedIn outreach and audience growth" loading="lazy" decoding="async">
-                                        <div class="dealifly-service-cta__content">
-                                            <p class="dealifly-section-kicker">Ready for the next step?</p>
-                                            <h2 id="service-cta-brand-storytelling">Start Your Growth Plan.</h2>
-                                            <p>Share your goals and we will map the next practical campaign step.</p>
-                                            <a href="contact.html" class="btn btn-primary rounded-pill"> Contact Us <iconify-icon icon="solar:arrow-right-up-linear" aria-hidden="true"></iconify-icon>
-                                            </a>
-                                        </div>
-                                    </section>
-                                    <section class="dealifly-content-panel" aria-labelledby="service-faq-brand-storytelling">
-                                        <p class="dealifly-section-kicker">Questions and answers</p>
-                                        <h2 id="service-faq-brand-storytelling">Frequently Asked Questions</h2>
-                                        <div class="accordion dealifly-faq" id="faq-brand-storytelling">
-                                            <div class="accordion-item">
-                                                <h3 class="accordion-header" id="faq-heading-brand-storytelling-1">
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-brand-storytelling-1" aria-expanded="true" aria-controls="faq-collapse-brand-storytelling-1"> What is brand storytelling in business? </button>
-                                                </h3>
-                                                <div id="faq-collapse-brand-storytelling-1" class="accordion-collapse collapse show" aria-labelledby="faq-heading-brand-storytelling-1" data-bs-parent="#faq-brand-storytelling">
-                                                    <div class="accordion-body">Brand storytelling is the process of presenting your business results and services in a narrative format that builds trust, credibility, and emotional connection with potential clients.</div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h3 class="accordion-header" id="faq-heading-brand-storytelling-2">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-brand-storytelling-2" aria-expanded="false" aria-controls="faq-collapse-brand-storytelling-2"> Why are case studies important for sales? </button>
-                                                </h3>
-                                                <div id="faq-collapse-brand-storytelling-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-brand-storytelling-2" data-bs-parent="#faq-brand-storytelling">
-                                                    <div class="accordion-body">Case studies show real results and proof of success, helping prospects trust your business and increasing conversion rates during the decision-making process.</div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h3 class="accordion-header" id="faq-heading-brand-storytelling-3">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-brand-storytelling-3" aria-expanded="false" aria-controls="faq-collapse-brand-storytelling-3"> Do you design presentations and brochures as well? </button>
-                                                </h3>
-                                                <div id="faq-collapse-brand-storytelling-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-brand-storytelling-3" data-bs-parent="#faq-brand-storytelling">
-                                                    <div class="accordion-body">Yes. We create fully designed client presentations, pitch decks, and company brochures along with professionally written content.</div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h3 class="accordion-header" id="faq-heading-brand-storytelling-4">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-brand-storytelling-4" aria-expanded="false" aria-controls="faq-collapse-brand-storytelling-4"> How do case studies help generate leads? </button>
-                                                </h3>
-                                                <div id="faq-collapse-brand-storytelling-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-brand-storytelling-4" data-bs-parent="#faq-brand-storytelling">
-                                                    <div class="accordion-body">They act as social proof by showing real client outcomes, making it easier to convert prospects into paying customers.</div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h3 class="accordion-header" id="faq-heading-brand-storytelling-5">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-brand-storytelling-5" aria-expanded="false" aria-controls="faq-collapse-brand-storytelling-5"> Can you use my existing client results? </button>
-                                                </h3>
-                                                <div id="faq-collapse-brand-storytelling-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-brand-storytelling-5" data-bs-parent="#faq-brand-storytelling">
-                                                    <div class="accordion-body">Yes. We can work with your existing data, client results, or interview your team to build compelling and accurate stories.</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
+                    <div class="dealifly-console-footer">
+                        <div class="dealifly-console-step">
+                            <span class="dealifly-console-step__num">01</span>
+                            <div class="dealifly-console-step__text">
+                                <h6>Outcome Mining</h6>
+                                <p>Extracting verified metrics, operational bottlenecks, and customer transformations to build factual credibility.</p>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </main>
-            <!-- Dealifly Footer -->
-            <footer class="dealifly-footer" data-bs-theme="dark">
-                <div class="section-space-lg-top section-space-sm-bottom">
-                    <div class="section-space-md-bottom">
-                        <div class="container">
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4 col-xxl-3">
-                                    <a class="logo dealifly-footer__brand" href="index.html" aria-label="Dealifly home">
-                                        <img src="assets/img/dealifly-logo.png" alt="" class="dealifly-footer__brand-mark">
-                                        <span class="dealifly-footer__brand-name">Dealifly</span>
-                                    </a>
-                                    <p class="mt-4 mb-6 text-light text-opacity-70"> Growth marketing for modern brands that need sharper positioning, better demand, and measurable campaign systems. </p>
-                                    <form action="contact.html" method="get" class="d-flex align-items-center gap-2">
-                                        <label for="footer-email" class="visually-hidden"> Enter your email </label>
-                                        <input type="email" name="email" id="footer-email" class="form-control form-control-sm bg-dark-subtle border-dark text-light" placeholder="Enter your email" autocomplete="email">
-                                        <button type="submit" class="btn btn-icon btn-dark-emphasis rounded-circle flex-shrink-0" aria-label="Contact Dealifly">
-                                            <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
-                                        </button>
-                                    </form>
-                                    <a href="https://wa.me/31684986062?text=Hi%2C%20Contacting%20you%20from%20the%20website" target="_blank" rel="noopener" class="dealifly-footer__whatsapp">
-                                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
-                                        <span>Chat on WhatsApp</span>
-                                    </a>
-                                </div>
-                                <div class="col-lg-8 col-xxl-9">
-                                    <div class="row g-4 justify-content-xl-around">
-                                        <div class="col-sm-12 col-md-6">
-                                            <h6 class="fs-18 fw-semibold text-light">Services</h6>
-                                            <div class="row g-4">
-                                                <div class="col-sm-6">
-                                                    <ul class="list gap-2">
-                                                        <li>
-                                                            <a href="linkedin-personal-branding.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> LinkedIn Personal Branding </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="ecommerce-growth-marketing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Ecommerce Growth Marketing </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="company-growth-marketing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Company Growth Marketing </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="linkedin-lead-generation.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> LinkedIn Lead Generation </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="email-marketing-outreach.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Email Marketing Outreach </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <ul class="list gap-2">
-                                                        <li>
-                                                            <a href="lead-research.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Lead Research </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="seo-geo.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> SEO &amp; GEO </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="content-marketing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Content Marketing </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="brand-identity.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Brand Identity </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="brand-storytelling.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Brand Storytelling </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-3">
-                                            <h6 class="fs-18 fw-semibold text-light">Company</h6>
-                                            <ul class="list gap-2">
-                                                <li>
-                                                    <a href="index.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Home </a>
-                                                </li>
-                                                <li>
-                                                    <a href="pricing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Pricing </a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Blog </a>
-                                                </li>
-                                                <li>
-                                                    <a href="case-study.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Case Studies </a>
-                                                </li>
-                                                <li>
-                                                    <a href="contact.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Contact </a>
-                                                </li>
-                                                <li>
-                                                    <a href="contact.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Privacy Policy </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6 col-md-3">
-                                            <h6 class="fs-18 fw-semibold text-light">Contact</h6>
-                                            <ul class="list gap-3">
-                                                <li>
-                                                    <span class="d-block text-light text-opacity-50 fs-14"> Email </span>
-                                                    <a href="mailto:contact@dealifly.com" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> contact@dealifly.com </a>
-                                                </li>
-                                                <li>
-                                                    <span class="d-block text-light text-opacity-50 fs-14"> Call us </span>
-                                                    <a href="tel:+31684986062" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> +31684986062 </a>
-                                                </li>
-                                                <li>
-                                                    <span class="d-block text-light text-opacity-50 fs-14"> Location </span>
-                                                    <span class="d-inline-block text-light text-opacity-70 fw-medium fs-14"> Netherlands </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="dealifly-console-step">
+                            <span class="dealifly-console-step__num">02</span>
+                            <div class="dealifly-console-step__text">
+                                <h6>Narrative Architecture</h6>
+                                <p>Structuring the story around high-stakes commercial realities, why alternatives failed, and how you delivered.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center overflow-hidden">
-                        <div class="container">
-                            <ul class="list list-row justify-content-center flex-wrap gap-4 mb-4">
-                                <li>
-                                    <a href="contact.html" class="link text-light text-opacity-70 hover:text-opacity-100 fs-14"> Privacy policy </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html" class="link text-light text-opacity-70 hover:text-opacity-100 fs-14"> Terms of use </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html" class="link text-light text-opacity-70 hover:text-opacity-100 fs-14"> Site map </a>
-                                </li>
-                            </ul>
-                            <p class="mb-0 text-wing text-light text-opacity-70"> Copyright 2026 All Rights Reserved By Dealifly | KVK number: 97804444 </p>
+                        <div class="dealifly-console-step">
+                            <span class="dealifly-console-step__num">03</span>
+                            <div class="dealifly-console-step__text">
+                                <h6>Collateral Craft</h6>
+                                <p>Designing typography-driven slide decks, downloadable one-sheeters, and interactive website teardowns.</p>
+                            </div>
+                        </div>
+                        <div class="dealifly-console-step">
+                            <span class="dealifly-console-step__num">04</span>
+                            <div class="dealifly-console-step__text">
+                                <h6>Deal Velocity</h6>
+                                <p>Arming your account executives with proof assets that address buyer objections before they are spoken.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </footer>
-            <!-- Dealifly Footer End -->
+            </div>
+        </section>
+
+        <!-- Main Solution Details & Sidebar Section -->
+        <section class="dealifly-solution-main-section">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+                    <!-- Sticky Sidebar -->
+                    <div class="col-lg-4 col-xl-3">
+                        <aside class="dealifly-solution-sidebar">
+                            <div class="dealifly-sidebar-box">
+                                <div class="dealifly-sidebar-box__title">All Growth Solutions</div>
+                                <ul class="dealifly-sidebar-menu">
+                                    <li><a href="company-growth-marketing.html">B2B Growth Marketing</a></li>
+                                    <li><a href="ecommerce-growth-marketing.html">Ecommerce Growth Marketing</a></li>
+                                    <li><a href="linkedin-personal-branding.html">LinkedIn Personal Branding</a></li>
+                                    <li><a href="linkedin-lead-generation.html">LinkedIn Lead Generation</a></li>
+                                    <li><a href="email-marketing-outreach.html">Email Marketing Outreach</a></li>
+                                    <li><a href="lead-research.html">Lead Research &amp; ICP Data</a></li>
+                                    <li><a href="seo-geo.html">SEO &amp; GEO (AI Discovery)</a></li>
+                                    <li><a href="content-marketing.html">Content Marketing</a></li>
+                                    <li><a href="brand-identity.html">Brand Identity</a></li>
+                                    <li><a href="brand-storytelling.html" class="active">Brand Storytelling</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dealifly-sidebar-box">
+                                <div class="dealifly-sidebar-box__title">Sales Collateral Audit</div>
+                                <p class="fs-14 text-light text-opacity-70 mb-3">
+                                    Send us your current pitch deck or case study for a structured narrative and win-rate review.
+                                </p>
+                                <a href="contact.html" class="dealifly-btn-primary w-100 text-center py-2 fs-13">
+                                    Book Collateral Review
+                                </a>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <!-- Main Solution Content -->
+                    <div class="col-lg-8 col-xl-9">
+                        <!-- Overview Panel -->
+                        <div class="dealifly-solution-card">
+                            <span class="dealifly-section-kicker">Service Overview</span>
+                            <h2 class="dealifly-h2">Brand Storytelling: Case Studies, Decks &amp; Collateral</h2>
+                            <p class="dealifly-body-text">
+                                We help high-growth businesses turn client results into formidable commercial stories that sell. Our Brand Storytelling service designs and produces high-impact case studies, investor presentations, sales decks, and collateral that demonstrate your value, build unshakeable trust, and convert prospects into closed contracts.
+                            </p>
+                            <p class="dealifly-body-text mb-0">
+                                Rather than reciting feature lists, we articulate why your company wins through structured, persuasive business storytelling assets. Modern enterprise buyers evaluate multiple vendors; compelling narrative proof is what secures executive consensus.
+                            </p>
+                        </div>
+
+                        <!-- Core Capabilities -->
+                        <div class="dealifly-solution-card">
+                            <span class="dealifly-section-kicker">Deliverables &amp; Systems</span>
+                            <h2 class="dealifly-h2">Core Capabilities</h2>
+
+                            <div class="dealifly-capability-grid">
+                                <div class="dealifly-capability-card">
+                                    <div class="dealifly-cap-num">01</div>
+                                    <h3 class="dealifly-h3">Case Studies That Close Deals</h3>
+                                    <p class="dealifly-body-text">
+                                        We turn customer engagements into structured case studies spotlighting tangible ROI, methodology, and transformation. Designed to eliminate hesitation during procurement reviews.
+                                    </p>
+                                </div>
+                                <div class="dealifly-capability-card">
+                                    <div class="dealifly-cap-num">02</div>
+                                    <h3 class="dealifly-h3">Pitch Decks &amp; Client Presentations</h3>
+                                    <p class="dealifly-body-text">
+                                        We write and design persuasive sales decks that clearly communicate your value proposition, process, and pricing. Every slide is structured to guide executive decision-making.
+                                    </p>
+                                </div>
+                                <div class="dealifly-capability-card">
+                                    <div class="dealifly-cap-num">03</div>
+                                    <h3 class="dealifly-h3">Company Overviews &amp; Sales Collateral</h3>
+                                    <p class="dealifly-body-text">
+                                        We craft 1-page tear sheets, solution overviews, and capability summaries tailored for enterprise champions to circulate internally to CFOs and key decision-makers.
+                                    </p>
+                                </div>
+                                <div class="dealifly-capability-card">
+                                    <div class="dealifly-cap-num">04</div>
+                                    <h3 class="dealifly-h3">Strategic Commercial Narrative</h3>
+                                    <p class="dealifly-body-text">
+                                        We align your entire GTM messaging around a crisp, high-conviction narrative that differentiates your solution from incumbent competitors and clarifies why customers must buy now.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3-Step Execution Process -->
+                        <div class="dealifly-solution-card">
+                            <span class="dealifly-section-kicker">Execution Framework</span>
+                            <h2 class="dealifly-h2">How It Works</h2>
+
+                            <div class="dealifly-process-flow">
+                                <div class="dealifly-process-flow-item">
+                                    <div class="dealifly-step-badge">01</div>
+                                    <div class="dealifly-step-info">
+                                        <h4>Discovery &amp; Proof Point Extraction</h4>
+                                        <p>
+                                            We review your successful customer deployments, conduct stakeholder interviews, and identify the compelling quantitative data points that prove your impact.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="dealifly-process-flow-item">
+                                    <div class="dealifly-step-badge">02</div>
+                                    <div class="dealifly-step-info">
+                                        <h4>Narrative Crafting &amp; Visual Design</h4>
+                                        <p>
+                                            We draft high-persuasion copy and engineer sleek, polished slide layouts, infographics, and PDF documents matching your brand design tokens.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="dealifly-process-flow-item">
+                                    <div class="dealifly-step-badge">03</div>
+                                    <div class="dealifly-step-info">
+                                        <h4>Refinement &amp; Sales Enablement Delivery</h4>
+                                        <p>
+                                            We polish all assets for conversion, delivering fully editable presentation files, web-ready PDF exports, and sales team guidance for customer meetings.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="dealifly-solution-card">
+                            <span class="dealifly-section-kicker">Got Questions?</span>
+                            <h2 class="dealifly-h2">Frequently Asked Questions</h2>
+
+                            <div class="dealifly-accordion accordion" id="faq-brand-storytelling">
+                                <div class="accordion-item dealifly-faq-item">
+                                    <h3 class="accordion-header" id="heading-bs-1">
+                                        <button class="accordion-button dealifly-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bs-1" aria-expanded="true" aria-controls="collapse-bs-1">
+                                            What is brand storytelling in B2B?
+                                        </button>
+                                    </h3>
+                                    <div id="collapse-bs-1" class="accordion-collapse collapse show" aria-labelledby="heading-bs-1" data-bs-parent="#faq-brand-storytelling">
+                                        <div class="accordion-body dealifly-faq-body">
+                                            B2B brand storytelling is the discipline of presenting client outcomes and strategic insights in a compelling narrative format that validates credibility, proves ROI, and motivates enterprise buyers to commit.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item dealifly-faq-item">
+                                    <h3 class="accordion-header" id="heading-bs-2">
+                                        <button class="accordion-button collapsed dealifly-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bs-2" aria-expanded="false" aria-controls="collapse-bs-2">
+                                            Why are data-backed case studies critical for sales cycles?
+                                        </button>
+                                    </h3>
+                                    <div id="collapse-bs-2" class="accordion-collapse collapse" aria-labelledby="heading-bs-2" data-bs-parent="#faq-brand-storytelling">
+                                        <div class="accordion-body dealifly-faq-body">
+                                            Enterprise decision-makers rarely buy without third-party proof. Rigorous case studies de-risk the purchasing decision, giving champions the exact evidence they need to justify budget allocation.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item dealifly-faq-item">
+                                    <h3 class="accordion-header" id="heading-bs-3">
+                                        <button class="accordion-button collapsed dealifly-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bs-3" aria-expanded="false" aria-controls="collapse-bs-3">
+                                            Do you design presentation decks and brochures as well?
+                                        </button>
+                                    </h3>
+                                    <div id="collapse-bs-3" class="accordion-collapse collapse" aria-labelledby="heading-bs-3" data-bs-parent="#faq-brand-storytelling">
+                                        <div class="accordion-body dealifly-faq-body">
+                                            Yes. We deliver both end-to-end copywriting and custom graphic design in editable Google Slides, PowerPoint, Keynote, and Figma formats, alongside print-ready PDFs.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item dealifly-faq-item">
+                                    <h3 class="accordion-header" id="heading-bs-4">
+                                        <button class="accordion-button collapsed dealifly-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bs-4" aria-expanded="false" aria-controls="collapse-bs-4">
+                                            How does sales collateral accelerate deal close rates?
+                                        </button>
+                                    </h3>
+                                    <div id="collapse-bs-4" class="accordion-collapse collapse" aria-labelledby="heading-bs-4" data-bs-parent="#faq-brand-storytelling">
+                                        <div class="accordion-body dealifly-faq-body">
+                                            Clear collateral enables asynchronous selling. Over 80% of purchasing decisions happen when your sales team is not in the room; structured collateral ensures your value is communicated accurately.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item dealifly-faq-item">
+                                    <h3 class="accordion-header" id="heading-bs-5">
+                                        <button class="accordion-button collapsed dealifly-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bs-5" aria-expanded="false" aria-controls="collapse-bs-5">
+                                            Can you extract stories from our existing client records?
+                                        </button>
+                                    </h3>
+                                    <div id="collapse-bs-5" class="accordion-collapse collapse" aria-labelledby="heading-bs-5" data-bs-parent="#faq-brand-storytelling">
+                                        <div class="accordion-body dealifly-faq-body">
+                                            Yes. We can work directly with raw performance data, conduct short customer interviews, or collaborate with your account managers to distill complex outcomes into crisp, impactful stories.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unified High-Conversion CTA Banner (Zero AI Images) -->
+                        <div class="dealifly-solution-cta-card">
+                            <span class="dealifly-section-kicker text-uppercase">Accelerate Deal Velocity</span>
+                            <h2 class="dealifly-cta-title">
+                                Arm Your Sales Team With Undeniable Proof
+                            </h2>
+                            <p class="dealifly-cta-desc">
+                                Transform your client results into powerful sales enablement assets that make enterprise buyers sign with confidence.
+                            </p>
+                            <div class="dealifly-cta-actions">
+                                <a href="contact.html" class="dealifly-btn-primary">
+                                    Book Strategy Call <i class="bi bi-arrow-right-short fs-5"></i>
+                                </a>
+                                <a href="https://wa.me/31684986062?text=Hi%2C%20I%20would%20like%20to%20discuss%20Brand%20Storytelling%20and%20Decks" target="_blank" rel="noopener" class="dealifly-btn-whatsapp">
+                                    <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                                </a>
+                            </div>
+                            <div class="dealifly-cta-proof">
+                                <span><i class="bi bi-file-earmark-check"></i> Enterprise Proof Framing</span>
+                                <span><i class="bi bi-graph-up-arrow"></i> Measurable Win Rate Lift</span>
+                                <span><i class="bi bi-shield-check"></i> 100% Data-Verified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dealifly Footer -->
+    <footer class="dealifly-footer" data-bs-theme="dark">
+        <div class="section-space-lg-top section-space-sm-bottom">
+            <div class="section-space-md-bottom">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                            <a class="logo dealifly-footer__brand" href="index.html" aria-label="Dealifly home">
+                                <img src="assets/img/dealifly-logo.png" alt="" class="dealifly-footer__brand-mark">
+                                <span class="dealifly-footer__brand-name">Dealifly</span>
+                            </a>
+                            <p class="mt-4 mb-6 text-light text-opacity-70">
+                                Growth marketing for modern brands that need sharper positioning, better demand, and measurable campaign systems.
+                            </p>
+                            <form action="contact.html" method="get" class="d-flex align-items-center gap-2">
+                                <label for="footer-email" class="visually-hidden"> Enter your email </label>
+                                <input type="email" name="email" id="footer-email" class="form-control form-control-sm bg-dark-subtle border-dark text-light" placeholder="Enter your email" autocomplete="email">
+                                <button type="submit" class="btn btn-icon btn-dark-emphasis rounded-circle flex-shrink-0" aria-label="Contact Dealifly">
+                                    <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-lg-8 col-xxl-9">
+                            <div class="row g-4">
+                                <div class="col-sm-6 col-md-6">
+                                    <h6 class="fs-18 fw-semibold text-light">Services</h6>
+                                    <div class="row g-2">
+                                        <div class="col-sm-6">
+                                            <ul class="list gap-2">
+                                                <li><a href="company-growth-marketing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> B2B Growth Marketing </a></li>
+                                                <li><a href="ecommerce-growth-marketing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> E-commerce Growth </a></li>
+                                                <li><a href="linkedin-personal-branding.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Personal Branding </a></li>
+                                                <li><a href="linkedin-lead-generation.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> LinkedIn Lead Gen </a></li>
+                                                <li><a href="email-marketing-outreach.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Email Marketing Outreach </a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list gap-2">
+                                                <li><a href="lead-research.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Lead Research </a></li>
+                                                <li><a href="seo-geo.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> SEO &amp; GEO </a></li>
+                                                <li><a href="content-marketing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Content Marketing </a></li>
+                                                <li><a href="brand-identity.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Brand Identity </a></li>
+                                                <li><a href="brand-storytelling.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Brand Storytelling </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h6 class="fs-18 fw-semibold text-light">Company</h6>
+                                    <ul class="list gap-2">
+                                        <li><a href="index.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Home </a></li>
+                                        <li><a href="pricing.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Pricing </a></li>
+                                        <li><a href="blog.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Blog </a></li>
+                                        <li><a href="case-study.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Case Studies </a></li>
+                                        <li><a href="contact.html" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> Contact </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h6 class="fs-18 fw-semibold text-light">Contact</h6>
+                                    <ul class="list gap-3">
+                                        <li>
+                                            <span class="d-block text-light text-opacity-50 fs-14"> Email </span>
+                                            <a href="mailto:contact@dealifly.com" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> contact@dealifly.com </a>
+                                        </li>
+                                        <li>
+                                            <span class="d-block text-light text-opacity-50 fs-14"> Call us </span>
+                                            <a href="tel:+31684986062" class="link d-inline-block text-light text-opacity-70 hover:text-opacity-100 fw-medium fs-14"> +31684986062 </a>
+                                        </li>
+                                        <li>
+                                            <span class="d-block text-light text-opacity-50 fs-14"> Location </span>
+                                            <span class="d-inline-block text-light text-opacity-70 fw-medium fs-14"> Netherlands </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center overflow-hidden">
+                <div class="container">
+                    <p class="mb-0 text-wing text-light text-opacity-70"> Copyright 2026 All Rights Reserved By Dealifly | KVK number: 97804444 </p>
+                </div>
+            </div>
         </div>
-    </div>
+    </footer>
+
     <a class="dealifly-whatsapp-float" href="https://wa.me/31684986062?text=Hi%2C%20Contacting%20you%20from%20the%20website" target="_blank" rel="noopener" aria-label="Chat with Dealifly on WhatsApp">
         <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>
+
     <!-- Scripts -->
     <script src="assets/js/bootstrap.bundle.js?v=5b2dea53fa53"></script>
     <script src="assets/js/iconify.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/simplebar.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/swiper.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/prism.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/gsap.min.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/ScrollTrigger.min.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/Flip.min.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/DrawSVGPlugin.min.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/SplitText.min.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/ScrollSmoother.min.js?v=5b2dea53fa53"></script>
-    <script src="assets/js/app.js?v=5b2dea53fa53"></script>
+    <script src="assets/js/dealifly-solutions.js?v=20260924"></script>
 </body>
 
 </html>

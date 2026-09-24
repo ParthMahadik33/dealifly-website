@@ -1,0 +1,1021 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------------
+  Dealifly Solutions & Services Redesign
+  Clean, professional, enterprise-grade B2B design system.
+  Zero AI-generated images; interactive SVG architectures;
+  full aesthetic consistency with homepage dark theme.
+--------------------------------------------------------------------*/
+
+:root {
+    --df-bg: #050507;
+    --df-bg-secondary: #09090D;
+    --df-surface: rgba(13, 13, 18, 0.95);
+    --df-surface-glass: rgba(18, 18, 26, 0.65);
+    --df-surface-hover: rgba(22, 22, 32, 0.9);
+    --df-border: rgba(255, 255, 255, 0.08);
+    --df-border-hover: rgba(155, 130, 232, 0.28);
+    --df-purple: #7657D9;
+    --df-purple-soft: #8F7AE8;
+    --df-purple-glow: rgba(118, 87, 217, 0.22);
+    --df-pink: #D85ACF;
+    --df-lavender: #B7A5F5;
+    --df-text-primary: #FFFFFF;
+    --df-text-secondary: #B7B7C2;
+    --df-text-muted: #8A8A96;
+    --df-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body.dealifly-solutions-page {
+    background-color: var(--df-bg) !important;
+    color: var(--df-text-secondary);
+    overflow-x: hidden;
+}
+
+/* ================================================================
+   Floating Navbar on Solutions Pages (Homogenous with Homepage)
+   ================================================================ */
+body.dealifly-solutions-page .primary-header {
+    position: sticky !important;
+    top: 14px !important;
+    z-index: 1080 !important;
+    width: calc(100% - 64px) !important;
+    max-width: 1260px !important;
+    margin: 14px auto 0 !important;
+    background: rgba(8, 8, 12, 0.84) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    border-radius: 36px !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.04) !important;
+    padding: 0.5rem 1.4rem !important;
+    transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease !important;
+}
+
+@media (max-width: 991px) {
+    body.dealifly-solutions-page .primary-header {
+        width: calc(100% - 24px) !important;
+        margin: 10px auto 0 !important;
+        border-radius: 20px !important;
+        padding: 0.5rem 1rem !important;
+    }
+}
+
+/* ================================================================
+   Solution Hero Section
+   ================================================================ */
+.dealifly-solution-hero {
+    position: relative;
+    padding: clamp(4rem, 8vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem);
+    background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(118, 87, 217, 0.18), transparent 70%),
+                radial-gradient(ellipse 60% 40% at 85% 20%, rgba(216, 90, 207, 0.06), transparent 60%),
+                var(--df-bg);
+    border-bottom: 1px solid var(--df-border);
+    overflow: hidden;
+}
+
+.dealifly-solution-hero__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.75;
+    z-index: 0;
+}
+
+.dealifly-solution-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.dealifly-solution-breadcrumbs {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--df-text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.dealifly-solution-breadcrumbs a {
+    color: var(--df-text-secondary);
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.dealifly-solution-breadcrumbs a:hover {
+    color: var(--df-lavender);
+}
+
+.dealifly-solution-breadcrumbs span.sep {
+    opacity: 0.4;
+    font-size: 0.75rem;
+}
+
+.dealifly-solution-breadcrumbs span.current {
+    color: var(--df-text-primary);
+    font-weight: 500;
+}
+
+.dealifly-solution-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.28rem 0.85rem;
+    border-radius: 9999px;
+    background: rgba(118, 87, 217, 0.10);
+    border: 1px solid rgba(155, 130, 232, 0.25);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--df-lavender);
+    margin-bottom: 1.2rem;
+}
+
+.dealifly-solution-badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--df-purple-soft);
+    box-shadow: 0 0 8px var(--df-purple);
+}
+
+.dealifly-solution-title {
+    font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--df-text-primary);
+    margin-bottom: 1rem;
+}
+
+.dealifly-solution-title .highlight {
+    background: linear-gradient(135deg, #FFFFFF 30%, var(--df-lavender) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dealifly-solution-lede {
+    font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--df-text-secondary);
+    max-width: 780px;
+    margin-bottom: 2rem;
+}
+
+/* Hero Key Stats Strip */
+.dealifly-solution-stats-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    max-width: 900px;
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dealifly-solution-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.dealifly-solution-stat-item strong {
+    font-size: clamp(1.4rem, 2vw, 1.85rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    font-family: var(--df-font-mono);
+}
+
+.dealifly-solution-stat-item span {
+    font-size: 0.8rem;
+    color: var(--df-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 0.2rem;
+}
+
+.dealifly-solution-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.dealifly-btn-primary {
+    background: linear-gradient(135deg, var(--df-purple) 0%, #603ec9 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    padding: 0.75rem 1.6rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 18px rgba(118, 87, 217, 0.35);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.dealifly-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(118, 87, 217, 0.5);
+    color: #FFFFFF !important;
+}
+
+.dealifly-btn-secondary {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: var(--df-text-primary) !important;
+    font-weight: 500;
+    padding: 0.75rem 1.4rem;
+    border-radius: 9999px;
+    backdrop-filter: blur(8px);
+    transition: background-color 200ms ease, border-color 200ms ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.dealifly-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(155, 130, 232, 0.35) !important;
+    color: #FFFFFF !important;
+}
+
+/* ================================================================
+   Interactive Solution Architecture Console
+   Replaces AI-generated imagery with an enterprise B2B workflow canvas
+   ================================================================ */
+.dealifly-solution-console-section {
+    position: relative;
+    padding: clamp(2rem, 4vw, 3.5rem) 0;
+    background: #07070A;
+}
+
+.dealifly-solution-console {
+    background: rgba(12, 12, 17, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.04);
+}
+
+.dealifly-console-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.4rem;
+    background: rgba(18, 18, 25, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dealifly-console-left {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.dealifly-console-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dealifly-console-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dealifly-console-dots span:nth-child(1) { background: #FF5F56; opacity: 0.8; }
+.dealifly-console-dots span:nth-child(2) { background: #FFBD2E; opacity: 0.8; }
+.dealifly-console-dots span:nth-child(3) { background: #27C93F; opacity: 0.8; }
+
+.dealifly-console-title {
+    font-family: var(--df-font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--df-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dealifly-console-badge-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #43C98B;
+    background: rgba(67, 201, 139, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(67, 201, 139, 0.2);
+}
+
+.dealifly-console-badge-live::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #43C98B;
+    box-shadow: 0 0 6px #43C98B;
+    animation: dfPulse 2s infinite ease-in-out;
+}
+
+.dealifly-console-metrics {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-family: var(--df-font-mono);
+    font-size: 0.76rem;
+    color: var(--df-text-muted);
+}
+
+.dealifly-console-metrics span strong {
+    color: var(--df-lavender);
+    font-weight: 600;
+}
+
+/* Console Canvas / SVG Graphic Area */
+.dealifly-console-body {
+    position: relative;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background: radial-gradient(circle at 50% 30%, rgba(118, 87, 217, 0.05), transparent 70%),
+                rgba(8, 8, 12, 0.95);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dealifly-arch-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 380px;
+}
+
+/* SVG interactive nodes and pulse animations */
+.arch-node {
+    transition: transform 200ms ease, opacity 200ms ease;
+    cursor: default;
+}
+
+.arch-node:hover {
+    transform: translateY(-2px);
+}
+
+.arch-beam-flow {
+    stroke-dasharray: 6 6;
+    animation: dfBeamFlow 20s linear infinite;
+}
+
+@keyframes dfBeamFlow {
+    from { stroke-dashoffset: 200; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes dfPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.9); }
+}
+
+/* Console Footer with Pipeline Steps */
+.dealifly-console-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dealifly-console-step {
+    padding: 1rem 1.25rem;
+    background: rgba(14, 14, 20, 0.95);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    transition: background-color 200ms ease;
+}
+
+.dealifly-console-step:hover {
+    background: rgba(20, 20, 30, 0.98);
+}
+
+.dealifly-console-step__num {
+    font-family: var(--df-font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--df-purple-soft);
+    background: rgba(118, 87, 217, 0.12);
+    border: 1px solid rgba(155, 130, 232, 0.2);
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.dealifly-console-step__text h6 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--df-text-primary);
+    margin: 0 0 0.2rem;
+}
+
+.dealifly-console-step__text p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--df-text-muted);
+    margin: 0;
+}
+
+/* ================================================================
+   Main Solution Content & Sidebar Layout
+   ================================================================ */
+.dealifly-solution-main-section {
+    position: relative;
+    padding: clamp(3rem, 6vw, 5.5rem) 0;
+    background: var(--df-bg);
+}
+
+/* Sticky Sidebar */
+.dealifly-solution-sidebar {
+    position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.dealifly-sidebar-box {
+    background: rgba(12, 12, 17, 0.95);
+    border: 1px solid var(--df-border);
+    border-radius: 16px;
+    padding: 1.4rem;
+}
+
+.dealifly-sidebar-box__title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--df-text-muted);
+    margin-bottom: 0.9rem;
+}
+
+.dealifly-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.dealifly-sidebar-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
+    color: var(--df-text-secondary);
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+    border: 1px solid transparent;
+}
+
+.dealifly-sidebar-menu a:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.dealifly-sidebar-menu a.active {
+    color: #FFFFFF;
+    background: rgba(118, 87, 217, 0.14);
+    border-color: rgba(155, 130, 232, 0.28);
+    font-weight: 600;
+}
+
+.dealifly-sidebar-menu a.active::after {
+    content: "•";
+    color: var(--df-purple-soft);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Sidebar Fast Consult Card */
+.dealifly-sidebar-consult-card {
+    background: linear-gradient(180deg, rgba(22, 18, 38, 0.9) 0%, rgba(12, 12, 17, 0.95) 100%);
+    border: 1px solid rgba(155, 130, 232, 0.22);
+    border-radius: 16px;
+    padding: 1.4rem;
+}
+
+.dealifly-sidebar-consult-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.4rem;
+}
+
+.dealifly-sidebar-consult-card p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--df-text-muted);
+    margin-bottom: 1.1rem;
+}
+
+.dealifly-sidebar-consult-card .btn {
+    width: 100%;
+    font-size: 0.84rem;
+}
+
+/* ================================================================
+   Content Panels (Overview, Capabilities, Process, FAQ)
+   ================================================================ */
+.dealifly-solution-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.dealifly-solution-card {
+    background: rgba(12, 12, 17, 0.95);
+    border: 1px solid var(--df-border);
+    border-radius: 18px;
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    transition: border-color 250ms ease;
+}
+
+.dealifly-solution-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dealifly-kicker {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--df-purple-soft);
+    margin-bottom: 0.6rem;
+    display: inline-block;
+}
+
+.dealifly-heading-lg {
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.25rem;
+}
+
+.dealifly-copy-lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--df-text-primary);
+    margin-bottom: 1rem;
+}
+
+.dealifly-copy {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--df-text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Deliverables Pill Cloud */
+.dealifly-deliverables-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dealifly-deliverable-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.78rem;
+    font-family: var(--df-font-mono);
+    color: var(--df-text-secondary);
+    transition: border-color 150ms ease, color 150ms ease;
+}
+
+.dealifly-deliverable-pill:hover {
+    border-color: rgba(155, 130, 232, 0.3);
+    color: #FFFFFF;
+}
+
+.dealifly-deliverable-pill i {
+    color: var(--df-purple-soft);
+    font-size: 0.85rem;
+}
+
+/* Core Capabilities 4-Grid */
+.dealifly-capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.dealifly-capability-item {
+    background: rgba(18, 18, 26, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 250ms ease, border-color 250ms ease, background-color 250ms ease;
+}
+
+.dealifly-capability-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(155, 130, 232, 0.28);
+    background: rgba(24, 22, 36, 0.7);
+}
+
+.dealifly-capability-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.dealifly-capability-num {
+    font-family: var(--df-font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--df-purple-soft);
+    background: rgba(118, 87, 217, 0.1);
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    border: 1px solid rgba(155, 130, 232, 0.18);
+}
+
+.dealifly-capability-icon {
+    font-size: 1.4rem;
+    color: var(--df-lavender);
+}
+
+.dealifly-capability-item h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1.35;
+    margin-bottom: 0.6rem;
+}
+
+.dealifly-capability-item p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--df-text-muted);
+    margin: 0;
+}
+
+/* How It Works Pipeline */
+.dealifly-process-pipeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.dealifly-pipeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background: rgba(18, 18, 26, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    transition: border-color 200ms ease, background-color 200ms ease;
+}
+
+.dealifly-pipeline-step:hover {
+    border-color: rgba(155, 130, 232, 0.24);
+    background: rgba(22, 20, 32, 0.6);
+}
+
+.dealifly-pipeline-number {
+    font-family: var(--df-font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, rgba(118, 87, 217, 0.25) 0%, rgba(216, 90, 207, 0.1) 100%);
+    border: 1px solid rgba(155, 130, 232, 0.35);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dealifly-pipeline-content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 0 0.4rem;
+}
+
+.dealifly-pipeline-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--df-text-secondary);
+    margin: 0;
+}
+
+/* ================================================================
+   High-Converting Solutions CTA Banner
+   (Zero AI images, clean dark glass with luminous radial glow)
+   ================================================================ */
+.dealifly-solution-cta-card {
+    position: relative;
+    background: radial-gradient(ellipse 90% 70% at 50% 0%, rgba(118, 87, 217, 0.22), transparent 75%),
+                linear-gradient(180deg, #100E1C 0%, #0B0A12 100%);
+    border: 1px solid rgba(155, 130, 232, 0.3);
+    border-radius: 20px;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 3rem);
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(118, 87, 217, 0.12);
+}
+
+.dealifly-solution-cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--df-lavender);
+    background: rgba(118, 87, 217, 0.15);
+    border: 1px solid rgba(155, 130, 232, 0.3);
+    padding: 0.28rem 0.85rem;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+}
+
+.dealifly-solution-cta-title {
+    font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.85rem;
+}
+
+.dealifly-solution-cta-desc {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+    color: var(--df-text-secondary);
+    max-width: 620px;
+    margin: 0 auto 1.85rem;
+}
+
+.dealifly-solution-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.dealifly-solution-cta-proof {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.82rem;
+    color: var(--df-text-muted);
+}
+
+.dealifly-solution-cta-proof span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dealifly-solution-cta-proof span i {
+    color: #43C98B;
+    font-size: 0.95rem;
+}
+
+/* ================================================================
+   FAQ Accordions
+   ================================================================ */
+.dealifly-solution-faq .accordion-item {
+    background: rgba(18, 18, 26, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px !important;
+    margin-bottom: 0.85rem;
+    overflow: hidden;
+    transition: border-color 200ms ease;
+}
+
+.dealifly-solution-faq .accordion-item:hover {
+    border-color: rgba(155, 130, 232, 0.25);
+}
+
+.dealifly-solution-faq .accordion-button {
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 1.15rem 1.4rem;
+    box-shadow: none !important;
+}
+
+.dealifly-solution-faq .accordion-button:not(.collapsed) {
+    color: var(--df-lavender);
+    background: rgba(118, 87, 217, 0.08);
+}
+
+.dealifly-solution-faq .accordion-button::after {
+    filter: invert(1) brightness(0.8);
+}
+
+.dealifly-solution-faq .accordion-body {
+    padding: 1rem 1.4rem 1.3rem;
+    color: var(--df-text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+/* ================================================================
+   Solutions Hub Page (service.html) Redesign Styles
+   ================================================================ */
+.dealifly-hub-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 3rem;
+}
+
+.dealifly-hub-filter-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--df-text-secondary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 180ms ease;
+}
+
+.dealifly-hub-filter-btn:hover {
+    color: #FFFFFF;
+    border-color: rgba(155, 130, 232, 0.28);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dealifly-hub-filter-btn.active {
+    background: rgba(118, 87, 217, 0.16);
+    border-color: rgba(155, 130, 232, 0.4);
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.dealifly-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+.dealifly-hub-card {
+    background: rgba(12, 12, 17, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.dealifly-hub-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(155, 130, 232, 0.35);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.75), 0 0 24px rgba(118, 87, 217, 0.08);
+}
+
+.dealifly-hub-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.dealifly-hub-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(118, 87, 217, 0.12);
+    border: 1px solid rgba(155, 130, 232, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--df-lavender);
+    font-size: 1.35rem;
+}
+
+.dealifly-hub-card__tag {
+    font-family: var(--df-font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dealifly-hub-card__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+}
+
+.dealifly-hub-card__desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--df-text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.dealifly-hub-card__bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.dealifly-hub-card__bullets li {
+    font-size: 0.8rem;
+    color: var(--df-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dealifly-hub-card__bullets li i {
+    color: var(--df-purple-soft);
+    font-size: 0.75rem;
+}
+
+.dealifly-hub-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--df-lavender);
+    margin-top: auto;
+    transition: gap 150ms ease;
+}
+
+.dealifly-hub-card:hover .dealifly-hub-card__link {
+    gap: 0.65rem;
+}
+
+/* Related Solutions Section at Bottom */
+.dealifly-related-solutions {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
