@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/dealifly-theme.css?v=20260920">
     <link rel="stylesheet" href="assets/css/dealifly-home-refinement.css?v=20260921">
     <link rel="stylesheet" href="assets/css/dealifly-solutions.css?v=20260924">
+    <link rel="stylesheet" href="assets/css/dealifly-solutions-refinement.css?v=20260926">
 </head>
 
 <body class="bg-dark-saas dealifly-homepage dealifly-solutions-page">
@@ -208,64 +209,77 @@
                         </div>
                     </div>
                     <div class="dealifly-console-body">
-                        <!-- Clean Interactive Architecture SVG -->
-                        <svg class="dealifly-arch-svg" viewBox="0 0 960 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background Grid Lines -->
-                            <line x1="40" y1="130" x2="920" y2="130" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="4 4" />
-                            <line class="arch-beam-flow" x1="40" y1="130" x2="920" y2="130" stroke="rgba(155,130,232,0.4)" stroke-width="2" />
+                        <!-- Clean Interactive Architecture Live Pipeline -->
+                        <div class="dealifly-live-pipeline">
+                            <div class="dealifly-pipeline-track" aria-hidden="true">
+                                <div class="dealifly-pipeline-beam"></div>
+                            </div>
+                            <div class="dealifly-pipeline-cards">
+                                <!-- Node 1: Demand & Intent Signals -->
+                                <div class="dealifly-pipeline-card" data-step="01">
+                                    <div class="dealifly-pipeline-card__header">
+                                        <div class="dealifly-pipeline-card__badge">01</div>
+                                        <div>
+                                            <h5 class="dealifly-pipeline-card__title">Demand Signals</h5>
+                                            <span class="dealifly-pipeline-card__sub">Top of Funnel</span>
+                                        </div>
+                                    </div>
+                                    <ul class="dealifly-pipeline-card__list">
+                                        <li>High-Intent ICP Data</li>
+                                        <li>Executive Authority</li>
+                                        <li>Targeted Retargeting</li>
+                                    </ul>
+                                </div>
 
-                            <!-- Node 1: Demand & Intent Signals -->
-                            <g class="arch-node" transform="translate(40, 60)">
-                                <rect width="180" height="140" rx="12" fill="rgba(18,18,26,0.9)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
-                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(118,87,217,0.15)" stroke="rgba(155,130,232,0.3)" />
-                                <text x="23" y="38" fill="#9B82E8" font-size="16" font-family="monospace">01</text>
-                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Demand Signals</text>
-                                <text x="56" y="44" fill="rgba(255,255,255,0.5)" font-size="10.5">Top of Funnel</text>
-                                <line x1="14" y1="62" x2="166" y2="62" stroke="rgba(255,255,255,0.08)" />
-                                <text x="14" y="82" fill="rgba(255,255,255,0.7)" font-size="10.5">• High-Intent ICP Data</text>
-                                <text x="14" y="102" fill="rgba(255,255,255,0.7)" font-size="10.5">• Executive Authority</text>
-                                <text x="14" y="122" fill="rgba(255,255,255,0.7)" font-size="10.5">• Targeted Retargeting</text>
-                            </g>
+                                <!-- Node 2: Conversion Core -->
+                                <div class="dealifly-pipeline-card dealifly-pipeline-card--active" data-step="02">
+                                    <div class="dealifly-pipeline-card__header">
+                                        <div class="dealifly-pipeline-card__badge">02</div>
+                                        <div>
+                                            <h5 class="dealifly-pipeline-card__title">Conversion Core</h5>
+                                            <span class="dealifly-pipeline-card__sub">Infrastructure</span>
+                                        </div>
+                                    </div>
+                                    <ul class="dealifly-pipeline-card__list">
+                                        <li>High-Conv Web UX</li>
+                                        <li>Technical SEO Setup</li>
+                                        <li>Enterprise Branding</li>
+                                    </ul>
+                                </div>
 
-                            <!-- Node 2: Conversion Core -->
-                            <g class="arch-node" transform="translate(270, 60)">
-                                <rect width="180" height="140" rx="12" fill="rgba(18,18,26,0.9)" stroke="rgba(155,130,232,0.35)" stroke-width="1.2" />
-                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(118,87,217,0.25)" stroke="#9B82E8" />
-                                <text x="23" y="38" fill="#FFFFFF" font-size="16" font-family="monospace">02</text>
-                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Conversion Core</text>
-                                <text x="56" y="44" fill="rgba(255,255,255,0.5)" font-size="10.5">Infrastructure</text>
-                                <line x1="14" y1="62" x2="166" y2="62" stroke="rgba(255,255,255,0.08)" />
-                                <text x="14" y="82" fill="rgba(255,255,255,0.7)" font-size="10.5">• High-Conv Web UX</text>
-                                <text x="14" y="102" fill="rgba(255,255,255,0.7)" font-size="10.5">• Technical SEO Setup</text>
-                                <text x="14" y="122" fill="rgba(255,255,255,0.7)" font-size="10.5">• Enterprise Branding</text>
-                            </g>
+                                <!-- Node 3: Outbound Execution -->
+                                <div class="dealifly-pipeline-card" data-step="03">
+                                    <div class="dealifly-pipeline-card__header">
+                                        <div class="dealifly-pipeline-card__badge">03</div>
+                                        <div>
+                                            <h5 class="dealifly-pipeline-card__title">Outbound Engine</h5>
+                                            <span class="dealifly-pipeline-card__sub">Direct Acquisition</span>
+                                        </div>
+                                    </div>
+                                    <ul class="dealifly-pipeline-card__list">
+                                        <li>LinkedIn Cadences</li>
+                                        <li>Cold Email Matrix</li>
+                                        <li>Smart Reply Handler</li>
+                                    </ul>
+                                </div>
 
-                            <!-- Node 3: Outbound Execution -->
-                            <g class="arch-node" transform="translate(500, 60)">
-                                <rect width="180" height="140" rx="12" fill="rgba(18,18,26,0.9)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
-                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(118,87,217,0.15)" stroke="rgba(155,130,232,0.3)" />
-                                <text x="23" y="38" fill="#9B82E8" font-size="16" font-family="monospace">03</text>
-                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Outbound Engine</text>
-                                <text x="56" y="44" fill="rgba(255,255,255,0.5)" font-size="10.5">Direct Acquisition</text>
-                                <line x1="14" y1="62" x2="166" y2="62" stroke="rgba(255,255,255,0.08)" />
-                                <text x="14" y="82" fill="rgba(255,255,255,0.7)" font-size="10.5">• LinkedIn Cadences</text>
-                                <text x="14" y="102" fill="rgba(255,255,255,0.7)" font-size="10.5">• Cold Email Matrix</text>
-                                <text x="14" y="122" fill="rgba(255,255,255,0.7)" font-size="10.5">• Smart Reply Handler</text>
-                            </g>
-
-                            <!-- Node 4: Qualified Pipeline -->
-                            <g class="arch-node" transform="translate(730, 60)">
-                                <rect width="190" height="140" rx="12" fill="rgba(24,20,38,0.95)" stroke="rgba(67,201,139,0.4)" stroke-width="1.5" />
-                                <rect x="14" y="16" width="32" height="32" rx="8" fill="rgba(67,201,139,0.15)" stroke="#43C98B" />
-                                <text x="23" y="38" fill="#43C98B" font-size="16" font-family="monospace">04</text>
-                                <text x="56" y="28" fill="#FFFFFF" font-size="13" font-weight="600">Booked Meetings</text>
-                                <text x="56" y="44" fill="#43C98B" font-size="10.5">Closed-Won Growth</text>
-                                <line x1="14" y1="62" x2="176" y2="62" stroke="rgba(255,255,255,0.08)" />
-                                <text x="14" y="82" fill="#FFFFFF" font-size="10.5">• CRM Live Ingestion</text>
-                                <text x="14" y="102" fill="#FFFFFF" font-size="10.5">• Qualified Handoff</text>
-                                <text x="14" y="122" fill="#43C98B" font-size="10.5">✓ 3.8x Pipeline ROI</text>
-                            </g>
-                        </svg>
+                                <!-- Node 4: Qualified Pipeline -->
+                                <div class="dealifly-pipeline-card dealifly-pipeline-card--success" data-step="04">
+                                    <div class="dealifly-pipeline-card__header">
+                                        <div class="dealifly-pipeline-card__badge">04</div>
+                                        <div>
+                                            <h5 class="dealifly-pipeline-card__title">Booked Meetings</h5>
+                                            <span class="dealifly-pipeline-card__sub">Closed-Won Growth</span>
+                                        </div>
+                                    </div>
+                                    <ul class="dealifly-pipeline-card__list">
+                                        <li>CRM Live Ingestion</li>
+                                        <li>Qualified Handoff</li>
+                                        <li class="dealifly-pipeline-card__highlight">✓ 3.8x Pipeline ROI</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="dealifly-console-footer">
                         <div class="dealifly-console-step">
@@ -304,9 +318,9 @@
         <!-- Main Solution Details & Sidebar Section -->
         <section class="dealifly-solution-main-section">
             <div class="container">
-                <div class="row g-5 align-items-start">
+                <div class="row g-4 g-xl-5 align-items-start dealifly-solution-top-grid">
                     <!-- Sticky Sidebar -->
-                    <div class="col-lg-4 col-xl-3">
+                    <div class="col-lg-4 col-xl-3 dealifly-solution-sidebar-col">
                         <aside class="dealifly-solution-sidebar">
                             <div class="dealifly-sidebar-box">
                                 <div class="dealifly-sidebar-box__title">All Growth Solutions</div>
@@ -338,173 +352,174 @@
                         </aside>
                     </div>
 
-                    <!-- Right Column: Content Stack -->
-                    <div class="col-lg-8 col-xl-9">
-                        <div class="dealifly-solution-stack">
-                            <!-- Service Overview -->
-                            <div class="dealifly-solution-card">
-                                <span class="dealifly-kicker">Unified Growth Framework</span>
-                                <h2 class="dealifly-heading-lg">End-to-End Company Growth Marketing</h2>
-                                <p class="dealifly-copy-lead">
-                                    Modern B2B buyers evaluate your company long before speaking to sales. We help organizations build an enterprise-grade brand presence, launch high-performing web platforms, optimize organic and AI search visibility, build executive LinkedIn authority, and run automated outbound campaigns that consistently fill sales calendars.
-                                </p>
-                                <p class="dealifly-copy">
-                                    Instead of managing 3-5 disconnected agencies (one for design, another for SEO, another for cold email), Dealifly acts as your single accountable growth partner. Every channel feeds into one unified pipeline model designed to lower customer acquisition costs and build sustainable pipeline.
-                                </p>
+                    <!-- Right Column: Service Overview -->
+                    <div class="col-lg-8 col-xl-9 dealifly-solution-overview-col">
+                        <!-- Service Overview -->
+                        <div class="dealifly-solution-card dealifly-solution-card--overview">
+                            <span class="dealifly-kicker">Unified Growth Framework</span>
+                            <h2 class="dealifly-heading-lg">End-to-End Company Growth Marketing</h2>
+                            <p class="dealifly-copy-lead">
+                                Modern B2B buyers evaluate your company long before speaking to sales. We help organizations build an enterprise-grade brand presence, launch high-performing web platforms, optimize organic and AI search visibility, build executive LinkedIn authority, and run automated outbound campaigns that consistently fill sales calendars.
+                            </p>
+                            <p class="dealifly-copy">
+                                Instead of managing 3-5 disconnected agencies (one for design, another for SEO, another for cold email), Dealifly acts as your single accountable growth partner. Every channel feeds into one unified pipeline model designed to lower customer acquisition costs and build sustainable pipeline.
+                            </p>
 
-                                <!-- Deliverables Cloud -->
-                                <div class="dealifly-deliverables-cloud">
-                                    <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Brand Identity &amp; Guidelines</span>
-                                    <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Conversion-Optimized Website</span>
-                                    <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Technical SEO Foundations</span>
-                                    <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Executive LinkedIn Ghostwriting</span>
-                                    <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Automated Cold Email Cadences</span>
-                                    <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Retargeting &amp; Paid Ad Engine</span>
-                                    <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> HubSpot / Salesforce Sync</span>
+                            <!-- Deliverables Cloud -->
+                            <div class="dealifly-deliverables-cloud">
+                                <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Brand Identity &amp; Guidelines</span>
+                                <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Conversion-Optimized Website</span>
+                                <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Technical SEO Foundations</span>
+                                <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Executive LinkedIn Ghostwriting</span>
+                                <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Automated Cold Email Cadences</span>
+                                <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> Retargeting &amp; Paid Ad Engine</span>
+                                <span class="dealifly-deliverable-pill"><i class="bi bi-check2-circle"></i> HubSpot / Salesforce Sync</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wide Centered Content Stack -->
+                <div class="dealifly-solution-full-stack">
+                    <!-- Core Capabilities -->
+                    <div class="dealifly-solution-card dealifly-solution-card--capabilities">
+                        <span class="dealifly-kicker">Execution Modules</span>
+                        <h2 class="dealifly-heading-lg">Core Capabilities Delivered</h2>
+                        <div class="dealifly-capabilities-grid">
+                            <div class="dealifly-capability-item">
+                                <div>
+                                    <div class="dealifly-capability-header">
+                                        <span class="dealifly-capability-num">01</span>
+                                        <iconify-icon icon="solar:palette-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
+                                    </div>
+                                    <h4>Enterprise Brand Presence</h4>
+                                    <p>Build unshakeable buyer confidence with complete visual brand guidelines, logo systems, typography, presentation pitch decks, and commercial brochures.</p>
                                 </div>
                             </div>
+                            <div class="dealifly-capability-item">
+                                <div>
+                                    <div class="dealifly-capability-header">
+                                        <span class="dealifly-capability-num">02</span>
+                                        <iconify-icon icon="solar:laptop-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
+                                    </div>
+                                    <h4>Conversion-First Website</h4>
+                                    <p>Fast, clean digital experiences engineered with persuasive value propositions, responsive layouts, technical SEO schema, and friction-free lead capture paths.</p>
+                                </div>
+                            </div>
+                            <div class="dealifly-capability-item">
+                                <div>
+                                    <div class="dealifly-capability-header">
+                                        <span class="dealifly-capability-num">03</span>
+                                        <iconify-icon icon="solar:users-group-rounded-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
+                                    </div>
+                                    <h4>Automated B2B Outbound</h4>
+                                    <p>Deterministic account identification paired with hyper-personalized LinkedIn outreach and cold email sequences that book calls directly into sales calendars.</p>
+                                </div>
+                            </div>
+                            <div class="dealifly-capability-item">
+                                <div>
+                                    <div class="dealifly-capability-header">
+                                        <span class="dealifly-capability-num">04</span>
+                                        <iconify-icon icon="solar:chart-square-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
+                                    </div>
+                                    <h4>Dedicated Growth Team</h4>
+                                    <p>Direct access to copywriters, designers, web engineers, and outreach managers with bi-weekly sprint reviews and transparent performance metrics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                            <!-- Core Capabilities -->
-                            <div class="dealifly-solution-card">
-                                <span class="dealifly-kicker">Execution Modules</span>
-                                <h2 class="dealifly-heading-lg">Core Capabilities Delivered</h2>
-                                <div class="dealifly-capabilities-grid">
-                                    <div class="dealifly-capability-item">
-                                        <div>
-                                            <div class="dealifly-capability-header">
-                                                <span class="dealifly-capability-num">01</span>
-                                                <iconify-icon icon="solar:palette-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
-                                            </div>
-                                            <h4>Enterprise Brand Presence</h4>
-                                            <p>Build unshakeable buyer confidence with complete visual brand guidelines, logo systems, typography, presentation pitch decks, and commercial brochures.</p>
-                                        </div>
-                                    </div>
-                                    <div class="dealifly-capability-item">
-                                        <div>
-                                            <div class="dealifly-capability-header">
-                                                <span class="dealifly-capability-num">02</span>
-                                                <iconify-icon icon="solar:laptop-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
-                                            </div>
-                                            <h4>Conversion-First Website</h4>
-                                            <p>Fast, clean digital experiences engineered with persuasive value propositions, responsive layouts, technical SEO schema, and friction-free lead capture paths.</p>
-                                        </div>
-                                    </div>
-                                    <div class="dealifly-capability-item">
-                                        <div>
-                                            <div class="dealifly-capability-header">
-                                                <span class="dealifly-capability-num">03</span>
-                                                <iconify-icon icon="solar:users-group-rounded-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
-                                            </div>
-                                            <h4>Automated B2B Outbound</h4>
-                                            <p>Deterministic account identification paired with hyper-personalized LinkedIn outreach and cold email sequences that book calls directly into sales calendars.</p>
-                                        </div>
-                                    </div>
-                                    <div class="dealifly-capability-item">
-                                        <div>
-                                            <div class="dealifly-capability-header">
-                                                <span class="dealifly-capability-num">04</span>
-                                                <iconify-icon icon="solar:chart-square-bold-duotone" class="dealifly-capability-icon"></iconify-icon>
-                                            </div>
-                                            <h4>Dedicated Growth Team</h4>
-                                            <p>Direct access to copywriters, designers, web engineers, and outreach managers with bi-weekly sprint reviews and transparent performance metrics.</p>
-                                        </div>
+                    <!-- Process Pipeline -->
+                    <div class="dealifly-solution-card dealifly-solution-card--process">
+                        <span class="dealifly-kicker">Deployment Roadmap</span>
+                        <h2 class="dealifly-heading-lg">How We Execute (3-Stage Sprint)</h2>
+                        <div class="dealifly-process-pipeline">
+                            <div class="dealifly-pipeline-step">
+                                <div class="dealifly-pipeline-number">01</div>
+                                <div class="dealifly-pipeline-content">
+                                    <h4>Audit &amp; Growth Architecture (Days 1–7)</h4>
+                                    <p>We dissect your existing brand perception, website conversion funnel, search presence, and historical outbound data to construct a customized 90-day growth sprint roadmap.</p>
+                                </div>
+                            </div>
+                            <div class="dealifly-pipeline-step">
+                                <div class="dealifly-pipeline-number">02</div>
+                                <div class="dealifly-pipeline-content">
+                                    <h4>Build &amp; System Launch (Days 8–21)</h4>
+                                    <p>We build out your digital collateral, launch conversion optimizations, configure cold domain infrastructure, and start multi-channel outreach to verified decision-makers.</p>
+                                </div>
+                            </div>
+                            <div class="dealifly-pipeline-step">
+                                <div class="dealifly-pipeline-number">03</div>
+                                <div class="dealifly-pipeline-content">
+                                    <h4>Optimize, Scale &amp; Compound (Ongoing)</h4>
+                                    <p>Through iterative A/B testing, copy refinement, ad retargeting optimization, and bi-weekly strategic reviews, we scale pipeline volume while driving down cost-per-acquisition.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clean High-Converting CTA (Zero AI images) -->
+                    <div class="dealifly-solution-cta-card">
+                        <div class="dealifly-solution-cta-badge">
+                            <span class="dealifly-solution-badge__dot"></span> Predictable Revenue System
+                        </div>
+                        <h2 class="dealifly-solution-cta-title">Ready to Scale Your B2B Growth Pipeline?</h2>
+                        <p class="dealifly-solution-cta-desc">
+                            Schedule a 30-minute growth consultation. We will analyze your market positioning, evaluate your current conversion flow, and map out a practical 90-day execution plan.
+                        </p>
+                        <div class="dealifly-solution-cta-actions">
+                            <a href="contact.html" class="dealifly-btn-primary">
+                                Schedule Growth Consultation <i class="bi bi-arrow-right-short fs-5"></i>
+                            </a>
+                            <a href="https://wa.me/31684986062?text=Hi%2C%20I%20am%20interested%20in%20Company%20Growth%20Marketing" target="_blank" rel="noopener" class="dealifly-btn-secondary">
+                                <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                        <div class="dealifly-solution-cta-proof">
+                            <span><i class="bi bi-check2-circle"></i> No long-term lock-in</span>
+                            <span><i class="bi bi-shield-check"></i> 100% Transparent weekly reporting</span>
+                            <span><i class="bi bi-lightning-charge"></i> Launch within 14 days</span>
+                        </div>
+                    </div>
+
+                    <!-- Frequently Asked Questions -->
+                    <div class="dealifly-solution-card dealifly-solution-card--faq">
+                        <span class="dealifly-kicker">Common Questions</span>
+                        <h2 class="dealifly-heading-lg">Frequently Asked Questions</h2>
+                        <div class="accordion dealifly-solution-faq" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="faqHeading1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                        1. What is Company Growth Marketing?
+                                    </button>
+                                </h3>
+                                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Company Growth Marketing is a unified strategic service that combines branding, website conversion design, SEO, executive LinkedIn thought leadership, paid advertising, and automated outbound lead generation to create a predictable stream of qualified business opportunities.
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Process Pipeline -->
-                            <div class="dealifly-solution-card">
-                                <span class="dealifly-kicker">Deployment Roadmap</span>
-                                <h2 class="dealifly-heading-lg">How We Execute (3-Stage Sprint)</h2>
-                                <div class="dealifly-process-pipeline">
-                                    <div class="dealifly-pipeline-step">
-                                        <div class="dealifly-pipeline-number">01</div>
-                                        <div class="dealifly-pipeline-content">
-                                            <h4>Audit &amp; Growth Architecture (Days 1–7)</h4>
-                                            <p>We dissect your existing brand perception, website conversion funnel, search presence, and historical outbound data to construct a customized 90-day growth sprint roadmap.</p>
-                                        </div>
-                                    </div>
-                                    <div class="dealifly-pipeline-step">
-                                        <div class="dealifly-pipeline-number">02</div>
-                                        <div class="dealifly-pipeline-content">
-                                            <h4>Build &amp; System Launch (Days 8–21)</h4>
-                                            <p>We build out your digital collateral, launch conversion optimizations, configure cold domain infrastructure, and start multi-channel outreach to verified decision-makers.</p>
-                                        </div>
-                                    </div>
-                                    <div class="dealifly-pipeline-step">
-                                        <div class="dealifly-pipeline-number">03</div>
-                                        <div class="dealifly-pipeline-content">
-                                            <h4>Optimize, Scale &amp; Compound (Ongoing)</h4>
-                                            <p>Through iterative A/B testing, copy refinement, ad retargeting optimization, and bi-weekly strategic reviews, we scale pipeline volume while driving down cost-per-acquisition.</p>
-                                        </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="faqHeading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                        2. Who is this service designed for?
+                                    </button>
+                                </h3>
+                                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        This service is ideal for B2B companies, tech startups, SaaS providers, professional service consultancies, and manufacturers that need a dedicated growth partner to manage demand generation, branding, and outbound without managing multiple disjointed agencies.
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Clean High-Converting CTA (Zero AI images) -->
-                            <div class="dealifly-solution-cta-card">
-                                <div class="dealifly-solution-cta-badge">
-                                    <span class="dealifly-solution-badge__dot"></span> Predictable Revenue System
-                                </div>
-                                <h2 class="dealifly-solution-cta-title">Ready to Scale Your B2B Growth Pipeline?</h2>
-                                <p class="dealifly-solution-cta-desc">
-                                    Schedule a 30-minute growth consultation. We will analyze your market positioning, evaluate your current conversion flow, and map out a practical 90-day execution plan.
-                                </p>
-                                <div class="dealifly-solution-cta-actions">
-                                    <a href="contact.html" class="dealifly-btn-primary">
-                                        Schedule Growth Consultation <i class="bi bi-arrow-right-short fs-5"></i>
-                                    </a>
-                                    <a href="https://wa.me/31684986062?text=Hi%2C%20I%20am%20interested%20in%20Company%20Growth%20Marketing" target="_blank" rel="noopener" class="dealifly-btn-secondary">
-                                        <i class="bi bi-whatsapp"></i> Chat on WhatsApp
-                                    </a>
-                                </div>
-                                <div class="dealifly-solution-cta-proof">
-                                    <span><i class="bi bi-check2-circle"></i> No long-term lock-in</span>
-                                    <span><i class="bi bi-shield-check"></i> 100% Transparent weekly reporting</span>
-                                    <span><i class="bi bi-lightning-charge"></i> Launch within 14 days</span>
-                                </div>
-                            </div>
-
-                            <!-- Frequently Asked Questions -->
-                            <div class="dealifly-solution-card">
-                                <span class="dealifly-kicker">Common Questions</span>
-                                <h2 class="dealifly-heading-lg">Frequently Asked Questions</h2>
-                                <div class="accordion dealifly-solution-faq" id="faqAccordion">
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header" id="faqHeading1">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                                                1. What is Company Growth Marketing?
-                                            </button>
-                                        </h3>
-                                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                Company Growth Marketing is a unified strategic service that combines branding, website conversion design, SEO, executive LinkedIn thought leadership, paid advertising, and automated outbound lead generation to create a predictable stream of qualified business opportunities.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header" id="faqHeading2">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                                                2. Who is this service designed for?
-                                            </button>
-                                        </h3>
-                                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                This service is ideal for B2B companies, tech startups, SaaS providers, professional service consultancies, and manufacturers that need a dedicated growth partner to manage demand generation, branding, and outbound without managing multiple disjointed agencies.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header" id="faqHeading3">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                                                3. How quickly can we expect measurable results?
-                                            </button>
-                                        </h3>
-                                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                Outbound campaigns and brand assets typically launch within the first 14–21 days. Most clients begin seeing qualified sales conversations and booked calls within the first 30 days of active outreach.
-                                            </div>
-                                        </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="faqHeading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                        3. How quickly can we expect measurable results?
+                                    </button>
+                                </h3>
+                                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Outbound campaigns and brand assets typically launch within the first 14–21 days. Most clients begin seeing qualified sales conversations and booked calls within the first 30 days of active outreach.
                                     </div>
                                 </div>
                             </div>

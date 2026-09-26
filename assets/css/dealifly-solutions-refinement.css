@@ -1,0 +1,556 @@
+@charset "UTF-8";
+
+/* ====================================================================
+   Dealifly Solutions Page Refinement (company-growth-marketing.html)
+   - Matches Dealifly Homepage & Case Study design system:
+     * Dark near-black background (#050507)
+     * Wide desktop container (~88-90% viewport, max 1380px)
+     * Plus Jakarta Sans typography & restrained purple accents
+     * Zero layout deformation or text distortion on hover
+     * Fully responsive: Desktop, Tablet, Mobile
+   ==================================================================== */
+
+:root {
+    --df-wide-max: 1380px;
+    --df-wide-width: min(90%, 1380px);
+}
+
+/* --- Floating Navbar Alignment --- */
+body.dealifly-solutions-page .primary-header {
+    width: var(--df-wide-width) !important;
+    max-width: var(--df-wide-max) !important;
+    margin: 14px auto 0 !important;
+}
+
+@media (max-width: 991.98px) {
+    body.dealifly-solutions-page .primary-header {
+        width: calc(100% - 24px) !important;
+        margin: 10px auto 0 !important;
+    }
+}
+
+/* --- Unified Wide Desktop Containers --- */
+body.dealifly-solutions-page .container {
+    width: var(--df-wide-width) !important;
+    max-width: var(--df-wide-max) !important;
+    margin-inline: auto !important;
+}
+
+/* --- Hero Section Refinements --- */
+body.dealifly-solutions-page .dealifly-solution-hero {
+    padding: clamp(5rem, 8vw, 7.5rem) 0 clamp(3rem, 5vw, 4.5rem) !important;
+}
+
+body.dealifly-solutions-page .dealifly-solution-title {
+    font-size: clamp(2.35rem, 4.2vw, 3.75rem) !important;
+    letter-spacing: -0.035em !important;
+    line-height: 1.12 !important;
+    max-width: 24ch;
+}
+
+body.dealifly-solutions-page .dealifly-solution-lede {
+    max-width: 58rem !important;
+    font-size: clamp(1.05rem, 1.25vw, 1.2rem) !important;
+    line-height: 1.7 !important;
+    color: rgba(245, 245, 247, 0.8) !important;
+}
+
+/* Hero Stats Strip - Spans Full Width Cleanly */
+body.dealifly-solutions-page .dealifly-solution-stats-strip {
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: clamp(1rem, 2vw, 2rem) !important;
+    padding-top: 2rem !important;
+    margin-top: 2.5rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dealifly-solutions-page .dealifly-solution-stat-item {
+    padding: 0.5rem 0;
+}
+
+body.dealifly-solutions-page .dealifly-solution-stat-item strong {
+    font-size: clamp(1.6rem, 2.4vw, 2.2rem) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.1 !important;
+}
+
+body.dealifly-solutions-page .dealifly-solution-stat-item span {
+    font-size: 0.8125rem !important;
+    color: var(--df-text-muted) !important;
+    letter-spacing: 0.05em !important;
+    margin-top: 0.35rem !important;
+    font-weight: 500 !important;
+}
+
+@media (max-width: 991.98px) {
+    body.dealifly-solutions-page .dealifly-solution-stats-strip {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body.dealifly-solutions-page .dealifly-solution-stats-strip {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+}
+
+/* ================================================================
+   Interactive Architecture Console & Live Pipeline Fixes
+   ================================================================ */
+.dealifly-solution-console-section {
+    padding: clamp(2rem, 4vw, 3.5rem) 0 !important;
+}
+
+.dealifly-solution-console {
+    background: #09090D !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255, 255, 255, 0.04) !important;
+    overflow: hidden !important;
+}
+
+.dealifly-console-header {
+    background: rgba(15, 14, 22, 0.85) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 0.95rem 1.6rem !important;
+}
+
+.dealifly-console-body {
+    position: relative !important;
+    padding: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem) !important;
+    background: radial-gradient(circle at 50% 30%, rgba(118, 87, 217, 0.07), transparent 65%), #07070B !important;
+    min-height: auto !important;
+}
+
+/* --- Responsive HTML Live Pipeline --- */
+.dealifly-live-pipeline {
+    position: relative;
+    width: 100%;
+}
+
+/* Connecting Line Running Behind Cards */
+.dealifly-pipeline-track {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    right: 2rem;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+.dealifly-pipeline-beam {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(143, 122, 232, 0.4) 30%, 
+        rgba(183, 165, 245, 0.8) 50%, 
+        rgba(67, 201, 139, 0.6) 80%, 
+        transparent 100%);
+    background-size: 200% 100%;
+    animation: dfBeamSlide 6s linear infinite;
+}
+
+@keyframes dfBeamSlide {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Cards Grid */
+.dealifly-pipeline-cards {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1rem, 1.8vw, 1.6rem);
+    width: 100%;
+}
+
+/* Single Pipeline Card */
+.dealifly-pipeline-card {
+    background: rgba(14, 13, 22, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    padding: 1.45rem 1.4rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.65);
+    cursor: default;
+    /* STABLE GEOMETRY: Only visual properties transition. No size, margin, or layout shifts! */
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+    position: relative;
+}
+
+/* Controlled Subtle Hover - Zero Collisions, Zero Deformation */
+.dealifly-pipeline-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(155, 130, 232, 0.42);
+    background: rgba(20, 18, 30, 0.98);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(118, 87, 217, 0.15);
+    z-index: 4;
+}
+
+.dealifly-pipeline-card--active {
+    border-color: rgba(155, 130, 232, 0.35);
+}
+
+.dealifly-pipeline-card--success {
+    border-color: rgba(67, 201, 139, 0.35);
+}
+
+.dealifly-pipeline-card--success:hover {
+    border-color: rgba(67, 201, 139, 0.55);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(67, 201, 139, 0.18);
+}
+
+/* Card Header (Step Number & Titles) */
+.dealifly-pipeline-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dealifly-pipeline-card__badge {
+    font-family: var(--df-font-mono, monospace);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #B7A5F5;
+    background: rgba(118, 87, 217, 0.16);
+    border: 1px solid rgba(155, 130, 232, 0.3);
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dealifly-pipeline-card--active .dealifly-pipeline-card__badge {
+    background: rgba(118, 87, 217, 0.28);
+    border-color: #9B82E8;
+    color: #FFFFFF;
+}
+
+.dealifly-pipeline-card--success .dealifly-pipeline-card__badge {
+    background: rgba(67, 201, 139, 0.16);
+    border-color: #43C98B;
+    color: #43C98B;
+}
+
+.dealifly-pipeline-card__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 0 0.15rem;
+    line-height: 1.25;
+}
+
+.dealifly-pipeline-card__sub {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.dealifly-pipeline-card--success .dealifly-pipeline-card__sub {
+    color: #43C98B;
+}
+
+/* Bullet List Inside Card */
+.dealifly-pipeline-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.dealifly-pipeline-card__list li {
+    font-size: 0.8125rem;
+    color: rgba(245, 245, 247, 0.78);
+    line-height: 1.45;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.dealifly-pipeline-card__list li::before {
+    content: "•";
+    color: var(--df-purple-soft, #8F7AE8);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.dealifly-pipeline-card--success .dealifly-pipeline-card__list li {
+    color: #FFFFFF;
+}
+
+.dealifly-pipeline-card--success .dealifly-pipeline-card__list li::before {
+    color: #43C98B;
+}
+
+.dealifly-pipeline-card__list li.dealifly-pipeline-card__highlight {
+    color: #43C98B;
+    font-weight: 600;
+}
+
+.dealifly-pipeline-card__list li.dealifly-pipeline-card__highlight::before {
+    display: none;
+}
+
+/* Console Footer Steps - 4-Column Responsive Grid */
+body.dealifly-solutions-page .dealifly-console-footer {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1px !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+}
+
+body.dealifly-solutions-page .dealifly-console-step {
+    padding: 1.15rem 1.4rem !important;
+    background: rgba(14, 14, 20, 0.96) !important;
+}
+
+/* Responsive Behavior for Pipeline */
+@media (max-width: 1080px) and (min-width: 768px) {
+    .dealifly-pipeline-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .dealifly-pipeline-track {
+        display: none;
+    }
+
+    body.dealifly-solutions-page .dealifly-console-footer {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .dealifly-pipeline-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .dealifly-pipeline-track {
+        display: none;
+    }
+
+    body.dealifly-solutions-page .dealifly-console-footer {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ================================================================
+   Main Solution Details & Sidebar Section
+   ================================================================ */
+body.dealifly-solutions-page .dealifly-solution-main-section {
+    padding: clamp(3.5rem, 6vw, 6rem) 0 !important;
+}
+
+/* Top Grid (Sidebar + Overview Card) */
+body.dealifly-solutions-page .dealifly-solution-top-grid {
+    align-items: stretch !important;
+}
+
+body.dealifly-solutions-page .dealifly-solution-sidebar-col {
+    display: flex;
+    flex-direction: column;
+}
+
+body.dealifly-solutions-page .dealifly-solution-sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+body.dealifly-solutions-page .dealifly-solution-overview-col {
+    display: flex;
+    flex-direction: column;
+}
+
+body.dealifly-solutions-page .dealifly-solution-card--overview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Wide Centered Content Stack Spanning Available Desktop Width */
+body.dealifly-solutions-page .dealifly-solution-full-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: clamp(2rem, 3.5vw, 3rem) !important;
+    margin-top: clamp(2.5rem, 4vw, 3.5rem) !important;
+    width: 100% !important;
+}
+
+/* Content Stack Cards */
+body.dealifly-solutions-page .dealifly-solution-card {
+    background: rgba(12, 11, 18, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    padding: clamp(2rem, 3.5vw, 3rem) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+body.dealifly-solutions-page .dealifly-copy-lead {
+    max-width: 78ch !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.75 !important;
+    color: rgba(245, 245, 247, 0.95) !important;
+}
+
+body.dealifly-solutions-page .dealifly-copy {
+    max-width: 78ch !important;
+    font-size: 0.98rem !important;
+    line-height: 1.75 !important;
+    color: rgba(245, 245, 247, 0.78) !important;
+}
+
+/* Capabilities Grid - 4 Columns Across Desktop, 2 on Tablet, 1 on Mobile */
+body.dealifly-solutions-page .dealifly-capabilities-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: clamp(1rem, 1.8vw, 1.5rem) !important;
+    margin-top: 1.75rem !important;
+    width: 100% !important;
+}
+
+body.dealifly-solutions-page .dealifly-capability-item {
+    background: rgba(18, 17, 26, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 1.6rem 1.4rem !important;
+    transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+body.dealifly-solutions-page .dealifly-capability-item:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(155, 130, 232, 0.3) !important;
+    background: rgba(24, 22, 36, 0.8) !important;
+}
+
+@media (max-width: 1099.98px) and (min-width: 641px) {
+    body.dealifly-solutions-page .dealifly-capabilities-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 640.98px) {
+    body.dealifly-solutions-page .dealifly-capabilities-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Process Pipeline Steps - 3-Column Roadmap Across Desktop */
+body.dealifly-solutions-page .dealifly-process-pipeline {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: clamp(1rem, 1.8vw, 1.5rem) !important;
+    margin-top: 1.75rem !important;
+    width: 100% !important;
+}
+
+body.dealifly-solutions-page .dealifly-pipeline-step {
+    background: rgba(18, 17, 26, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    border-radius: 16px !important;
+    padding: 1.6rem 1.6rem !important;
+    transition: border-color 200ms ease, background-color 200ms ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+body.dealifly-solutions-page .dealifly-pipeline-step:hover {
+    border-color: rgba(155, 130, 232, 0.28) !important;
+    background: rgba(22, 20, 32, 0.7) !important;
+}
+
+body.dealifly-solutions-page .dealifly-pipeline-step .dealifly-pipeline-number {
+    font-family: var(--df-font-mono, monospace);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #B7A5F5;
+    background: rgba(118, 87, 217, 0.16);
+    border: 1px solid rgba(155, 130, 232, 0.3);
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.1rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 991.98px) {
+    body.dealifly-solutions-page .dealifly-process-pipeline {
+        grid-template-columns: 1fr !important;
+        gap: 1.15rem !important;
+    }
+}
+
+/* CTA Card - Full Width Clean Dark Glass */
+body.dealifly-solutions-page .dealifly-solution-cta-card {
+    border-radius: 22px !important;
+    padding: clamp(2.5rem, 4.5vw, 4rem) clamp(1.5rem, 3.5vw, 3.5rem) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+body.dealifly-solutions-page .dealifly-solution-cta-desc {
+    max-width: 720px !important;
+    margin: 0 auto 1.85rem !important;
+}
+
+/* FAQ Accordion - Spans Full Width Cleanly */
+body.dealifly-solutions-page .dealifly-solution-faq {
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+}
+
+body.dealifly-solutions-page .dealifly-solution-faq .accordion-item {
+    width: 100% !important;
+}
+
+body.dealifly-solutions-page .dealifly-solution-faq .accordion-body {
+    max-width: 90ch;
+    line-height: 1.7;
+    color: rgba(245, 245, 247, 0.85);
+}
+
+/* Footer Container Alignment */
+body.dealifly-solutions-page .dealifly-footer .container {
+    width: var(--df-wide-width) !important;
+    max-width: var(--df-wide-max) !important;
+    margin-inline: auto !important;
+}
