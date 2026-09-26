@@ -19,10 +19,11 @@
     <link rel="stylesheet" href="assets/css/prism.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/style.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/dealifly-theme.css?v=20260920">
+    <link rel="stylesheet" href="assets/css/dealifly-case-study-refinement.css?v=20260926f">
 </head>
 
-<body class="bg-dark-saas">
-    <nav class="navbar navbar-expand-lg primary-header primary-header--transparent-light-alt primary-header--fixed top-0 primary-header-crossed:top-0">
+<body class="bg-dark-saas dealifly-case-study-page">
+    <nav class="navbar navbar-expand-lg primary-header primary-header--transparent-light-alt dealifly-floating-nav">
         <div class="container align-items-lg-center">
             <a class="logo dealifly-nav-logo" href="index.html" aria-label="Dealifly home">
                 <img src="assets/img/dealifly-logo.png" alt="" class="dealifly-nav-logo__mark" width="40" height="40">
@@ -127,12 +128,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="dealifly-detail-media-section">
+                <section class="dealifly-detail-metrics-section">
                     <div class="container">
-                        <figure class="dealifly-detail-media dealifly-detail-media--case">
-                            <img src="assets/img/dealifly/case-study-ecommerce-cover.png" alt="Dealifly case study cover for an end-to-end e-commerce growth system for a women&#039;s clothing brand" loading="eager" decoding="async">
-                        </figure>
-                        <div class="dealifly-metric-grid">
+                        <div class="dealifly-metric-grid" aria-label="Key project metrics">
                             <div class="dealifly-metric-card">
                                 <strong>24</strong>
                                 <span>influencer collaborations</span>
@@ -153,9 +151,9 @@
                     </div>
                 </section>
                 <section class="dealifly-detail-section section-space-y">
-                    <div class="container">
-                        <div class="row g-5 g-xl-8 align-items-start">
-                            <div class="col-lg-4 col-xl-3">
+                    <div class="container dealifly-case-study-container">
+                        <div class="row g-4 g-xl-5 align-items-start dealifly-case-study-top-grid">
+                            <div class="col-lg-4 col-xl-4 dealifly-case-study-sidebar-col">
                                 <aside class="dealifly-detail-sidebar">
                                     <a class="dealifly-back-link" href="case-study.html">
                                         <iconify-icon icon="solar:arrow-left-linear" aria-hidden="true"></iconify-icon> All case studies </a>
@@ -208,14 +206,14 @@
                                     </div>
                                 </aside>
                             </div>
-                            <div class="col-lg-8 col-xl-9">
-                                <div class="dealifly-content-stack">
-                                    <section class="dealifly-content-panel" id="objective">
+                            <div class="col-lg-8 col-xl-8 dealifly-case-study-top-content-col">
+                                <div class="dealifly-case-study-top-content-stack">
+                                    <section class="dealifly-content-panel dealifly-content-panel--objective" id="objective">
                                         <p class="dealifly-section-kicker">The objective</p>
                                         <h2>Objective</h2>
                                         <p>Launch a lean but scalable fashion brand that could validate product-market fit quickly, generate early revenue without a large inventory commitment, and build the brand, content, and operational systems needed for long-term growth.</p>
                                     </section>
-                                    <section class="dealifly-content-panel" id="challenge">
+                                    <section class="dealifly-content-panel dealifly-content-panel--challenge" id="challenge">
                                         <p class="dealifly-section-kicker">The challenge</p>
                                         <h2>Challenge</h2>
                                         <p>The main risk was not the product itself. It was launching without validated demand, trust, a repeatable content engine, or alignment between operations and marketing.</p>
@@ -238,12 +236,21 @@
                                             </li>
                                         </ul>
                                     </section>
-                                    <section class="dealifly-content-panel" id="strategy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dealifly-case-study-narrative-divider" aria-hidden="true">
+                            <span class="dealifly-case-study-narrative-divider__line"></span>
+                            <span class="dealifly-case-study-narrative-divider__tag">Detailed Case Study</span>
+                            <span class="dealifly-case-study-narrative-divider__line"></span>
+                        </div>
+                        <div class="dealifly-case-study-centered-stack">
+                            <section class="dealifly-content-panel dealifly-content-panel--strategy" id="strategy">
                                         <p class="dealifly-section-kicker">The approach</p>
                                         <h2>Strategy</h2>
                                         <p>We designed a full-stack e-commerce growth system around one principle: scale advertising and inventory only after demand has been validated through structure, content, and trust. The work was sequenced across backend setup, brand and store creation, social proof, and customer acquisition.</p>
                                     </section>
-                                    <section class="dealifly-content-panel dealifly-content-panel--flush" id="execution">
+                                    <section class="dealifly-content-panel dealifly-content-panel--flush dealifly-content-panel--execution" id="execution">
                                         <div class="dealifly-content-panel__heading">
                                             <p class="dealifly-section-kicker">The execution</p>
                                             <h2>Growth Phases</h2>
@@ -375,7 +382,7 @@
                                             </article>
                                         </div>
                                     </section>
-                                    <section class="dealifly-content-panel" id="cost-control">
+                                    <section class="dealifly-content-panel dealifly-content-panel--cost" id="cost-control">
                                         <p class="dealifly-section-kicker">Investment discipline</p>
                                         <h2>Cost Control</h2>
                                         <div class="dealifly-cost-list">
@@ -421,7 +428,7 @@
                                             </article>
                                         </div>
                                     </section>
-                                    <section class="dealifly-content-panel" id="results">
+                                    <section class="dealifly-content-panel dealifly-content-panel--results" id="results">
                                         <p class="dealifly-section-kicker">The outcome</p>
                                         <h2>Results</h2>
                                         <ul class="dealifly-check-list dealifly-check-list--results">
@@ -447,7 +454,7 @@
                                             </li>
                                         </ul>
                                     </section>
-                                    <section class="dealifly-content-panel" id="insights">
+                                    <section class="dealifly-content-panel dealifly-content-panel--insights" id="insights">
                                         <p class="dealifly-section-kicker">What the work revealed</p>
                                         <h2>Key Insights</h2>
                                         <div class="dealifly-insight-grid">
@@ -455,7 +462,7 @@
                                                 <iconify-icon icon="solar:lightbulb-bolt-linear" aria-hidden="true"></iconify-icon>
                                                 <h3>Validate before scaling</h3>
                                                 <p>Building infrastructure before ads improves conversion efficiency and reduces failure risk.</p>
-                                            </article>
+                                             </article>
                                             <article class="dealifly-insight-card">
                                                 <iconify-icon icon="solar:lightbulb-bolt-linear" aria-hidden="true"></iconify-icon>
                                                 <h3>Content is foundational</h3>
@@ -484,9 +491,174 @@
                                     </section>
                                 </div>
                             </div>
+                        </section>
+                <!-- Contact Section -->
+                <section class="dealifly-contact-section position-relative" id="contact"
+                    aria-labelledby="contact-section-heading">
+                    <div class="container position-relative z-1">
+                        <div class="row g-5 align-items-start justify-content-between">
+                            <!-- Left Column: Editorial & Contact Details (~45%) -->
+                            <div class="col-lg-5 col-xl-5">
+                                <div class="dealifly-contact-editorial">
+                                    <span class="dealifly-cap-badge mb-3">
+                                        <span class="dealifly-cap-badge__dot"></span>Let's Connect
+                                    </span>
+                                    <h2 id="contact-section-heading" class="text-light dealifly-contact-headline mb-0">
+                                        Get Started
+                                    </h2>
+
+                                    <!-- 3 Concise Benefit Bullets -->
+                                    <ul class="dealifly-contact-benefit-list list-unstyled d-flex flex-column gap-3 mb-4">
+                                        <li class="d-flex align-items-center gap-3">
+                                            <span class="dealifly-contact-bullet-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+                                                    <path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#8F7AE8" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="dealifly-contact-bullet-text">Understand your growth
+                                                opportunities</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <span class="dealifly-contact-bullet-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+                                                    <path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#8F7AE8" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="dealifly-contact-bullet-text">Explore AI-first marketing
+                                                solutions</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <span class="dealifly-contact-bullet-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+                                                    <path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#8F7AE8" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="dealifly-contact-bullet-text">Build a strategy around your business
+                                                goals</span>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Secondary Contact Details Block -->
+                                    <div class="dealifly-contact-info-block">
+                                        <div class="dealifly-contact-info-item">
+                                            <span class="dealifly-contact-info-label">Email</span>
+                                            <a href="mailto:contact@dealifly.com" class="dealifly-contact-info-value">contact@dealifly.com</a>
+                                        </div>
+                                        <div class="dealifly-contact-info-item">
+                                            <span class="dealifly-contact-info-label">WhatsApp / Call</span>
+                                            <a href="https://wa.me/31684986062" class="dealifly-contact-info-value" target="_blank" rel="noopener">06-84986062</a>
+                                        </div>
+                                        <div class="dealifly-contact-info-item">
+                                            <span class="dealifly-contact-info-label">Address</span>
+                                            <span class="dealifly-contact-info-value">Binnendelta 11M, 1261 WZ Blaricum</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Premium Contact Form Card (~55%) -->
+                            <div class="col-lg-7 col-xl-6">
+                                <div class="dealifly-contact-form-card">
+                                    <div class="dealifly-contact-form-header mb-3">
+                                        <h3 class="dealifly-contact-form-title text-light mb-2">BOOK A CALL WITH US</h3>
+                                        <p class="dealifly-contact-form-desc mb-0">Fill out the details below and we will
+                                            follow up with practical recommendations.</p>
+                                    </div>
+
+                                    <form action="contact-submit.php" method="post" id="contact-form"
+                                        class="row g-3 g-md-4 dealifly-contact-form-body">
+                                        <!-- Status Message Container -->
+                                        <div class="dealifly-contact-status form-message col-12" id="form-message"
+                                            role="status" aria-live="polite"></div>
+
+                                        <!-- Honeypot -->
+                                        <div class="dealifly-contact-honeypot" aria-hidden="true" style="display: none;">
+                                            <label for="website">Website</label>
+                                            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                                        </div>
+
+                                        <!-- Name & Email -->
+                                        <div class="col-md-6">
+                                            <label for="contact-name" class="dealifly-contact-label">Name <span
+                                                    class="dealifly-req-star">*</span></label>
+                                            <input type="text" name="name" id="contact-name"
+                                                 class="form-control dealifly-contact-input" placeholder="Your name"
+                                                maxlength="100" autocomplete="name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-email" class="dealifly-contact-label">Business Email <span
+                                                    class="dealifly-req-star">*</span></label>
+                                            <input type="email" name="email" id="contact-email"
+                                                class="form-control dealifly-contact-input" placeholder="you@company.com"
+                                                maxlength="190" autocomplete="email" required>
+                                        </div>
+
+                                        <!-- Company & Phone -->
+                                        <div class="col-md-6">
+                                            <label for="contact-company" class="dealifly-contact-label">Company or
+                                                Brand</label>
+                                            <input type="text" name="company" id="contact-company"
+                                                 class="form-control dealifly-contact-input" placeholder="Company name"
+                                                maxlength="150" autocomplete="organization">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-phone" class="dealifly-contact-label">Phone Number</label>
+                                            <input type="tel" name="phone" id="contact-phone"
+                                                class="form-control dealifly-contact-input" placeholder="Phone number"
+                                                maxlength="40" autocomplete="tel">
+                                        </div>
+
+                                        <!-- Service Area -->
+                                        <div class="col-12">
+                                            <label for="contact-service" class="dealifly-contact-label">What do you need
+                                                help with? <span class="dealifly-req-star">*</span></label>
+                                            <select name="service" id="contact-service"
+                                                class="form-select dealifly-contact-select" required>
+                                                <option value="" disabled selected>Select an area of interest</option>
+                                                <option value="company-growth-marketing">B2B Growth Marketing</option>
+                                                <option value="ecommerce-growth-marketing">Ecommerce Growth Marketing
+                                                </option>
+                                                <option value="linkedin-personal-branding">LinkedIn Personal Branding
+                                                </option>
+                                                <option value="linkedin">LinkedIn Lead Generation</option>
+                                                <option value="email">Email Marketing Outreach</option>
+                                                <option value="lead-research">Lead Research</option>
+                                                <option value="seo-geo">SEO &amp; GEO</option>
+                                                <option value="content">Content Marketing</option>
+                                                <option value="brand-identity">Brand Identity</option>
+                                                <option value="brand-storytelling">Brand Storytelling</option>
+                                                <option value="growth-program">Growth Program</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Message -->
+                                        <div class="col-12">
+                                            <label for="contact-message" class="dealifly-contact-label">Message <span
+                                                    class="dealifly-req-star">*</span></label>
+                                            <textarea name="message" id="contact-message"
+                                                class="form-control dealifly-contact-textarea" rows="3"
+                                                placeholder="Tell us about your goals, current challenges, or timeline..."
+                                                maxlength="5000" required></textarea>
+                                        </div>
+
+                                        <!-- Submit Button -->
+                                        <div class="col-12 pt-1">
+                                            <button type="submit" class="btn dealifly-contact-submit w-100">
+                                                <span>Book a Strategy Call</span>
+                                                <iconify-icon icon="solar:arrow-right-linear"
+                                                    aria-hidden="true"></iconify-icon>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
+                <!-- Contact Section End -->
             </main>
             <!-- Dealifly Footer -->
             <footer class="dealifly-footer" data-bs-theme="dark">
