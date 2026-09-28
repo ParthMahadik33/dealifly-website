@@ -1,6 +1,11 @@
 DirectoryIndex index.html
 AddDefaultCharset UTF-8
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^industries/?$ index.html#industries [R=301,NE,L]
+</IfModule>
+
 <IfModule mod_mime.c>
     AddType text/css .css
     AddType application/javascript .js

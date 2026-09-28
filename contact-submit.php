@@ -5,10 +5,23 @@ function dealifly_redirect(string $status): void
 {
     $referer = (string) ($_SERVER['HTTP_REFERER'] ?? '');
     $path = parse_url($referer, PHP_URL_PATH) ?? '';
-    $page = (strpos($referer, 'index.html') !== false || $path === '/' || $path === '')
-        ? 'index.html'
-        : 'contact.html';
-    header('Location: ' . $page . '?status=' . rawurlencode($status) . '#contact-form', true, 303);
+    
+    $page = 'contact.html#contact-form';
+    if (strpos($referer, 'index.html') !== false || $path === '/' || $path === '') {
+        $page = 'index.html#contact-form';
+    } elseif (strpos($referer, 'b2b-companies.html') !== false) {
+        $page = 'industries/b2b-companies.html#contact-section';
+    } elseif (strpos($referer, 'ecommerce.html') !== false) {
+        $page = 'industries/ecommerce.html#contact-section';
+    } elseif (strpos($referer, 'recruitment-agencies.html') !== false) {
+        $page = 'industries/recruitment-agencies.html#contact-section';
+    } elseif (strpos($referer, 'accounting-firm.html') !== false) {
+        $page = 'industries/accounting-firm.html#contact-section';
+    }
+    
+    $parts = explode('#', $page);
+    $url = $parts[0] . '?status=' . rawurlencode($status) . (isset($parts[1]) ? '#' . $parts[1] : '');
+    header('Location: ' . $url, true, 303);
     exit;
 }
 
@@ -37,6 +50,7 @@ $message = $clean($_POST['message'] ?? '', 5000);
 $serviceKey = $clean($_POST['service'] ?? '', 50);
 
 $services = [
+    // Core Services
     'linkedin-personal-branding' => 'LinkedIn Personal Branding',
     'ecommerce-growth-marketing' => 'Ecommerce Growth Marketing',
     'company-growth-marketing' => 'Company Growth Marketing',
@@ -48,6 +62,20 @@ $services = [
     'brand-identity' => 'Brand Identity',
     'brand-storytelling' => 'Brand Storytelling',
     'growth-program' => 'Growth Program',
+    // Industry Form options
+    'b2b-growth-system' => 'B2B Growth Marketing System',
+    'content-marketing' => 'Content Marketing',
+    'lead-generation' => 'Lead Generation',
+    'outreach-automation' => 'Automated LinkedIn & Email Outreach',
+    'appointment-booking' => 'Appointment Booking & CRM Automation',
+    'ecom-strategy' => 'E-commerce Growth Strategy',
+    'customer-acquisition' => 'Customer Acquisition & Paid Advertising',
+    'influencer-expansion' => 'Influencer & Market Expansion',
+    'marketing-automation' => 'Marketing Automation & AI Chatbot',
+    'full-store-growth' => 'Full E-commerce Scale Program',
+    'tax-growth-strategy' => 'Tax & Accounting Growth Strategy',
+    'linkedin-email-outreach' => 'Automated LinkedIn & Email Outreach',
+    'full-firm-program' => 'Full Practice Growth Program',
 ];
 
 if ($name === '' || $email === false || $message === '' || !isset($services[$serviceKey])) {
