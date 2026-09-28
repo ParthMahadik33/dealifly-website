@@ -248,9 +248,12 @@ body.dealifly-homepage .dealifly-hero-particles {
     display: block;
     width: 100%;
     height: 100%;
-    opacity: 0.72;
+    opacity: 1;
     pointer-events: none;
+    -webkit-mask-image: radial-gradient(ellipse 92% 85% at 50% 40%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.8) 70%, transparent 95%);
+    mask-image: radial-gradient(ellipse 92% 85% at 50% 40%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.8) 70%, transparent 95%);
 }
+
 
 /* Subtle atmospheric diffused gradient */
 body.dealifly-homepage .hero-8::after {

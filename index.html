@@ -205,8 +205,7 @@
             <!-- Hero -->
             <div class="hero-8">
                 <div class="hero-8__backdrop" aria-hidden="true">
-                    <canvas class="dealifly-hero-particles" data-particle-speed="0.4"
-                        data-particle-density="1.4"></canvas>
+                    <canvas class="dealifly-hero-particles" aria-hidden="true"></canvas>
                 </div>
                 <div class="hero-8__content">
                     <div class="container">
@@ -1554,136 +1553,198 @@
     <script src="assets/js/SplitText.min.js?v=5b2dea53fa53"></script>
     <script src="assets/js/ScrollSmoother.min.js?v=5b2dea53fa53"></script>
     <script>
+        /**
+         * Dealifly Visual Test: 21st.dev Inspired Animated Grid Pattern
+         * - Pure vanilla Canvas 2D implementation
+         * - Faint brand purple grid lines behind hero content
+         * - Slow ambient drift and softly pulsing square accents
+         * - Zero layout shift, zero overflow, fully responsive
+         */
         (function () {
             var hero = document.querySelector('.dealifly-homepage .hero-8');
             var canvas = hero && hero.querySelector('.dealifly-hero-particles');
             if (!canvas || !canvas.getContext) return;
 
-            var context = canvas.getContext('2d');
-            var particles = [];
+            var ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
             var width = 0;
             var height = 0;
-            var centerX = 0;
-            var centerY = 0;
-            var animationFrame = null;
+            var dpr = 1;
+            var animFrame = null;
+            var isRunning = true;
 
-            var speedMultiplier = parseFloat(canvas.getAttribute('data-particle-speed')) || 0.4;
-            var densityMultiplier = parseFloat(canvas.getAttribute('data-particle-density')) || 1.2;
+            // Grid configuration
+            var cellSize = 46; // base grid square size
+            var cols = 0;
+            var rows = 0;
+            var offsetY = 0;
+            var driftSpeed = 0.08; // slow, smooth ambient drift
 
-            // Dealifly brand palette: luminous lavender, bright purple, neon pink, and crisp white highlights
-            var colors = [
-                'rgba(196, 181, 253,', // luminous lavender
-                'rgba(167, 139, 250,', // bright brand purple
-                'rgba(143, 122, 232,', // core purple
-                'rgba(240, 171, 252,', // bright brand pink
-                'rgba(255, 255, 255,'  // bright white star highlight
+            // Active pulsing squares pool
+            var activeSquares = [];
+            var maxActiveSquares = 14;
+
+            // Brand palette tints (balanced Dealifly purple / violet)
+            var gridLineColor = 'rgba(167, 139, 250, 0.135)'; // clearly visible yet refined
+            var squarePalette = [
+                { fill: 'rgba(167, 139, 250, ', stroke: 'rgba(196, 181, 253, ' }, // Dealifly brand purple
+                { fill: 'rgba(155, 122, 235, ', stroke: 'rgba(185, 155, 255, ' }, // Soft medium purple
+                { fill: 'rgba(182, 128, 250, ', stroke: 'rgba(210, 175, 255, ' }  // Luminous violet
             ];
 
-            function createParticle(spawnAtCenter) {
-                var angle = Math.random() * Math.PI * 2;
-                var maxRadius = Math.max(width, height) * 0.75;
-                var distance = spawnAtCenter ? Math.random() * 30 : Math.random() * maxRadius;
-                var speed = 0.6 + Math.random() * 1.8;
+            function createSquare(immediate) {
+                var col = Math.floor(Math.random() * cols);
+                var row = Math.floor(Math.random() * rows);
+                var palette = squarePalette[Math.floor(Math.random() * squarePalette.length)];
+                var duration = 200 + Math.random() * 220; // 3.3s - 7s at 60fps
+                var progress = immediate ? Math.random() : 0;
+                var delay = immediate ? 0 : Math.floor(Math.random() * 120);
+
                 return {
-                    angle: angle,
-                    distance: distance,
-                    speed: speed,
-                    length: 12 + Math.random() * 60,
-                    color: colors[Math.floor(Math.random() * colors.length)],
-                    alpha: 0.32 + Math.random() * 0.30,
-                    lineWidth: 1.1 + Math.random() * 0.8
+                    col: col,
+                    row: row,
+                    progress: progress,
+                    duration: duration,
+                    delay: delay,
+                    palette: palette,
+                    maxAlpha: 0.22 + Math.random() * 0.08 // 0.22 - 0.30 (noticeably visible, tastefully muted)
                 };
             }
 
             function resize() {
-                var devicePixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
                 var bounds = hero.getBoundingClientRect();
                 width = Math.max(1, bounds.width || window.innerWidth);
                 height = Math.max(1, bounds.height || hero.offsetHeight || 600);
 
-                canvas.width = Math.round(width * devicePixelRatio);
-                canvas.height = Math.round(height * devicePixelRatio);
+                canvas.width = Math.round(width * dpr);
+                canvas.height = Math.round(height * dpr);
                 canvas.style.width = width + 'px';
                 canvas.style.height = height + 'px';
 
-                context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-                centerX = width / 2;
-                centerY = height * 0.42;
-            }
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-            function initializeParticles() {
                 var isMobile = width < 768;
-                var baseCount = isMobile ? 90 : 150;
-                var particleCount = Math.max(20, Math.round(baseCount * densityMultiplier));
-                particles = [];
-                for (var i = 0; i < particleCount; i++) {
-                    particles.push(createParticle(false));
+                cellSize = isMobile ? 36 : 46;
+                cols = Math.ceil(width / cellSize) + 1;
+                rows = Math.ceil(height / cellSize) + 2;
+
+                maxActiveSquares = isMobile ? 7 : Math.min(20, Math.max(10, Math.round((cols * rows) * 0.025)));
+
+                activeSquares = [];
+                for (var i = 0; i < maxActiveSquares; i++) {
+                    activeSquares.push(createSquare(true));
                 }
             }
 
-            function step() {
-                context.clearRect(0, 0, width, height);
-                context.globalCompositeOperation = 'lighter';
-                var maxDistance = Math.max(width, height) * 0.85;
+            function draw() {
+                ctx.clearRect(0, 0, width, height);
 
-                for (var i = 0; i < particles.length; i++) {
-                    var p = particles[i];
-                    var x0 = centerX + Math.cos(p.angle) * p.distance;
-                    var y0 = centerY + Math.sin(p.angle) * p.distance;
-                    var trailDist = Math.max(p.distance - p.length, 0);
-                    var x1 = centerX + Math.cos(p.angle) * trailDist;
-                    var y1 = centerY + Math.sin(p.angle) * trailDist;
+                // Grid offset calculation for smooth seamless ambient drift
+                var effectiveOffsetY = offsetY % cellSize;
+                var startY = -cellSize + effectiveOffsetY;
+                var endY = height + cellSize;
 
-                    // fade out toward edges
-                    var edgeFade = 1 - Math.max(0, (p.distance - maxDistance * 0.7) / (maxDistance * 0.3));
-                    var alpha = p.alpha * Math.max(0, Math.min(1, edgeFade));
+                // 1. Draw subtle grid lines
+                ctx.save();
+                ctx.beginPath();
+                ctx.strokeStyle = gridLineColor;
+                ctx.lineWidth = 1;
 
-                    var gradient = context.createLinearGradient(x1, y1, x0, y0);
-                    gradient.addColorStop(0, p.color + '0)');
-                    gradient.addColorStop(1, p.color + alpha + ')');
-
-                    context.strokeStyle = gradient;
-                    context.lineWidth = p.lineWidth;
-                    context.beginPath();
-                    context.moveTo(x1, y1);
-                    context.lineTo(x0, y0);
-                    context.stroke();
-
-                    // Luminous head spark for extra radiance
-                    context.fillStyle = p.color + Math.min(1, alpha * 1.1) + ')';
-                    context.beginPath();
-                    context.arc(x0, y0, p.lineWidth * 0.75, 0, Math.PI * 2);
-                    context.fill();
-
-                    p.distance += p.speed * speedMultiplier * 4;
-
-                    if (p.distance > maxDistance) {
-                        particles[i] = createParticle(true);
-                    }
+                // Vertical lines
+                for (var c = 0; c <= cols; c++) {
+                    var x = Math.round(c * cellSize) + 0.5;
+                    ctx.moveTo(x, 0);
+                    ctx.lineTo(x, height);
                 }
 
-                animationFrame = window.requestAnimationFrame(step);
+                // Horizontal lines (with ambient drift)
+                for (var y = startY; y <= endY; y += cellSize) {
+                    var lineY = Math.round(y) + 0.5;
+                    ctx.moveTo(0, lineY);
+                    ctx.lineTo(width, lineY);
+                }
+                ctx.stroke();
+                ctx.restore();
+
+                // 2. Draw animated pulsing squares
+                for (var s = 0; s < activeSquares.length; s++) {
+                    var sq = activeSquares[s];
+                    if (sq.delay > 0) {
+                        sq.delay--;
+                        continue;
+                    }
+
+                    sq.progress += 1 / sq.duration;
+                    if (sq.progress >= 1) {
+                        activeSquares[s] = createSquare(false);
+                        continue;
+                    }
+
+                    // Smooth sine ease curve (0 -> 1 -> 0)
+                    var curve = Math.sin(sq.progress * Math.PI);
+                    var alpha = curve * sq.maxAlpha;
+
+                    var sqX = sq.col * cellSize;
+                    var sqY = sq.row * cellSize + effectiveOffsetY - cellSize;
+
+                    if (sqX + cellSize < 0 || sqX > width || sqY + cellSize < 0 || sqY > height) {
+                        continue;
+                    }
+
+                    // Soft purple glow fill
+                    ctx.fillStyle = sq.palette.fill + alpha.toFixed(4) + ')';
+                    ctx.fillRect(sqX + 1, sqY + 1, cellSize - 1, cellSize - 1);
+
+                    // Delicate accent border highlight
+                    ctx.strokeStyle = sq.palette.stroke + (alpha * 1.5).toFixed(4) + ')';
+                    ctx.lineWidth = 1;
+                    ctx.strokeRect(sqX + 0.5, sqY + 0.5, cellSize, cellSize);
+                }
+
+                offsetY += driftSpeed;
+            }
+
+            function loop() {
+                if (!isRunning) return;
+                draw();
+                animFrame = window.requestAnimationFrame(loop);
             }
 
             resize();
-            initializeParticles();
 
+            // Reduced motion support
+            var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                driftSpeed = 0;
+                draw();
+                return;
+            }
+
+            loop();
+
+            // Window resize with debounce
             var resizeTimer = null;
             window.addEventListener('resize', function () {
                 if (resizeTimer) clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function () {
                     resize();
-                    initializeParticles();
                 }, 100);
             }, { passive: true });
 
-            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                step();
-                if (animationFrame) window.cancelAnimationFrame(animationFrame);
-                return;
-            }
-
-            step();
+            // Tab visibility optimization
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    isRunning = false;
+                    if (animFrame) window.cancelAnimationFrame(animFrame);
+                } else {
+                    if (!isRunning) {
+                        isRunning = true;
+                        animFrame = window.requestAnimationFrame(loop);
+                    }
+                }
+            });
         }());
     </script>
     <script src="assets/js/app.js?v=5b2dea53fa53"></script>
