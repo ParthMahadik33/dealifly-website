@@ -556,21 +556,24 @@ body.dealifly-solutions-page .dealifly-footer .container {
 }
 
 /* ================================================================
-   B2B Marketing Solution Page Specific Styling
+   Dealifly Solutions Design System (Matching B2B Marketing Standard)
    - Clean, professional, restrained Dealifly design system
    - Responsive multi-column to single-column transitions
    ================================================================ */
 
 /* Section Spacing & Containers */
+.dealifly-solution-section,
 .dealifly-b2b-section {
     padding: clamp(2.5rem, 4.5vw, 4rem) 0;
     width: 100%;
 }
 
+.dealifly-solution-section-header,
 .dealifly-b2b-section-header {
     margin-bottom: clamp(1.75rem, 3vw, 2.75rem);
 }
 
+.dealifly-solution-section-header .dealifly-kicker,
 .dealifly-b2b-section-header .dealifly-kicker {
     display: inline-block;
     font-size: 0.75rem;
@@ -581,6 +584,7 @@ body.dealifly-solutions-page .dealifly-footer .container {
     margin-bottom: 0.65rem;
 }
 
+.dealifly-solution-section-header .dealifly-heading-lg,
 .dealifly-b2b-section-header .dealifly-heading-lg {
     font-size: clamp(1.75rem, 2.8vw, 2.35rem);
     font-weight: 700;
@@ -590,6 +594,7 @@ body.dealifly-solutions-page .dealifly-footer .container {
     margin-bottom: 0.75rem;
 }
 
+.dealifly-solution-section-header .dealifly-copy-lead,
 .dealifly-b2b-section-header .dealifly-copy-lead {
     font-size: clamp(1rem, 1.2vw, 1.125rem);
     color: rgba(245, 245, 247, 0.78);
@@ -597,6 +602,100 @@ body.dealifly-solutions-page .dealifly-footer .container {
     max-width: 68ch;
     margin-bottom: 0;
 }
+
+/* Service Overview Card */
+.dealifly-overview-card {
+    background: rgba(14, 13, 22, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: clamp(2rem, 3.5vw, 3rem);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dealifly-overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8F7AE8, rgba(143, 122, 232, 0.2));
+    opacity: 0.8;
+}
+
+.dealifly-overview-card .dealifly-kicker {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--df-purple-soft, #8F7AE8);
+    margin-bottom: 0.65rem;
+}
+
+.dealifly-overview-card .dealifly-heading-lg {
+    font-size: clamp(1.75rem, 2.8vw, 2.35rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Deliverables Pills Inside Overview */
+.dealifly-deliverables-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+}
+
+.dealifly-deliverable-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.95rem;
+    background: rgba(118, 87, 217, 0.1);
+    border: 1px solid rgba(155, 130, 232, 0.22);
+    border-radius: 30px;
+    font-size: 0.8125rem;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.dealifly-deliverable-pill i {
+    color: #B7A5F5;
+}
+
+/* CTA Proof Points */
+.dealifly-cta-proof,
+.dealifly-solution-cta-proof {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.dealifly-cta-proof span,
+.dealifly-solution-cta-proof span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(245, 245, 247, 0.75);
+}
+
+.dealifly-cta-proof span i,
+.dealifly-solution-cta-proof span i {
+    color: #43C98B;
+    font-size: 1rem;
+}
+
 
 /* Two Approaches (2 Boxes Grid) */
 .dealifly-two-boxes-grid {

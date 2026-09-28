@@ -437,10 +437,15 @@ body.dealifly-homepage .dealifly-accent {
     text-shadow: none !important;
 }
 
-/* Star rating reviews - subtle brand pink accent */
-body.dealifly-homepage span.d-block.fs-14[style*="color: #f54ff2"] {
-    color: var(--dealifly-pink-soft) !important;
-    opacity: 0.9;
+/* Review section kicker & star ratings - Dealifly purple/lavender accent */
+body.dealifly-homepage .dealifly-reviews-section span.d-inline-block.fw-medium,
+body.dealifly-homepage .dealifly-reviews-section [aria-label*="stars"],
+body.dealifly-homepage .testimonial-section-2 [aria-label*="stars"],
+body.dealifly-homepage template[data-review-cards] [aria-label*="stars"],
+body.dealifly-homepage span.d-block.fs-14[aria-label*="stars"] {
+    color: var(--dealifly-lavender, #B7A5F5) !important;
+    opacity: 0.95;
+    text-shadow: none !important;
 }
 
 /* Specialized services section kicker & icons */
