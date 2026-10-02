@@ -860,7 +860,23 @@ body.dealifly-homepage .dealifly-services-section {
 }
 
 body.dealifly-homepage .dealifly-services-header {
-    margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 0;
+    text-align: left !important;
+}
+
+body.dealifly-homepage #services-heading {
+    text-align: left !important;
+    color: #FFFFFF !important;
+    background: none !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: none !important;
+}
+
+body.dealifly-homepage #services-heading span {
+    color: #FFFFFF !important;
+    background: none !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: none !important;
 }
 
 body.dealifly-homepage .dealifly-services-grid {
@@ -909,13 +925,20 @@ body.dealifly-homepage .dealifly-service-card:hover .dealifly-service-card__icon
     color: #FFFFFF;
 }
 
+body.dealifly-homepage .dealifly-services-section .dealifly-service-card__title,
+body.dealifly-homepage .dealifly-service-card h3,
 body.dealifly-homepage .dealifly-service-card__title {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.35;
-    color: #FFFFFF;
-    margin-bottom: 0.65rem;
-    letter-spacing: -0.01em;
+    font-family: var(--ff-1, "Plus Jakarta Sans", sans-serif) !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    color: #FFFFFF !important;
+    margin-bottom: 0.65rem !important;
+    letter-spacing: -0.01em !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-transform: none !important;
 }
 
 body.dealifly-homepage .dealifly-service-card__desc {
@@ -958,13 +981,14 @@ body.dealifly-homepage .dealifly-process-section {
 }
 
 body.dealifly-homepage .dealifly-process-header {
-    margin-bottom: clamp(3rem, 4.5vw, 4.5rem);
-    max-width: 820px;
+    margin-bottom: 0;
+    max-width: 100%;
+    text-align: left !important;
 }
 
 @media (min-width: 992px) {
     body.dealifly-homepage .dealifly-process-header h2 {
-        white-space: nowrap;
+        white-space: normal;
     }
 }
 
@@ -974,6 +998,11 @@ body.dealifly-homepage .dealifly-process-header h2 {
     line-height: 1.15;
     letter-spacing: -0.025em;
     color: #FFFFFF;
+    text-align: left !important;
+}
+
+body.dealifly-homepage #how-i-work-heading {
+    text-align: left !important;
 }
 
 body.dealifly-homepage .dealifly-process-subheading {
@@ -981,6 +1010,9 @@ body.dealifly-homepage .dealifly-process-subheading {
     line-height: 1.65;
     color: rgba(245, 245, 247, 0.65);
     max-width: 540px;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
 }
 
 /* Horizontal 4-Column Grid on Desktop */
@@ -1551,12 +1583,13 @@ body.dealifly-homepage .dealifly-nav-dropdown:hover .dealifly-nav-caret {
         transform: translateX(-50%) translateY(0) !important;
     }
 
-    /* Solutions 2-Column Grid */
-    body.dealifly-homepage .dealifly-dropdown-menu--solutions {
-        width: 560px !important;
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 0.25rem 0.5rem !important;
+    /* Services Dropdown (5 Core Available Services) */
+    body.dealifly-homepage .dealifly-dropdown-menu--solutions,
+    body.dealifly-homepage .dealifly-dropdown-menu--services {
+        width: 320px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.25rem !important;
     }
 
     /* Industries Single Column */
@@ -1576,7 +1609,7 @@ body.dealifly-homepage .dealifly-nav-dropdown:hover .dealifly-nav-caret {
     }
 
     body.dealifly-homepage .dealifly-dropdown-menu .dealifly-dropdown-footer {
-        grid-column: span 2 !important;
+        grid-column: span 1 !important;
     }
 }
 
@@ -2246,14 +2279,56 @@ body.dealifly-homepage .dealifly-footer-inner {
 /* ================================================================
    Hero WhatsApp CTA & How I Work Label Refinement
    ================================================================ */
-/* "HOW I WORK" Eyebrow Badge Optical Spacing Refinement */
+/* "HOW I WORK" & "Client feedback" Eyebrow Badge Optical Spacing Refinement */
 body.dealifly-homepage .dealifly-cap-badge--process,
-body.dealifly-homepage .dealifly-process-header .dealifly-cap-badge {
+body.dealifly-homepage .dealifly-process-header .dealifly-cap-badge,
+body.dealifly-homepage .dealifly-reviews-section .dealifly-cap-badge {
     letter-spacing: 0.04em !important;
     word-spacing: -0.07em !important;
     display: inline-flex !important;
     align-items: center !important;
     gap: 0.5rem !important;
+}
+
+body.dealifly-homepage .dealifly-reviews-section h3 {
+    text-align: left !important;
+}
+
+/* Consistent Left-Alignment Across All Major Homepage Section Headings */
+body.dealifly-homepage .dealifly-industries-section .col-md-8,
+body.dealifly-homepage .dealifly-services-section .col-md-8,
+body.dealifly-homepage .dealifly-process-section .col-md-8,
+body.dealifly-homepage .dealifly-reviews-section .col-md-8 {
+    text-align: left !important;
+}
+
+body.dealifly-homepage .dealifly-industries-section h3,
+body.dealifly-homepage .dealifly-services-section h2,
+body.dealifly-homepage .dealifly-process-section h2,
+body.dealifly-homepage .dealifly-reviews-section h3,
+body.dealifly-homepage #services-heading,
+body.dealifly-homepage #how-i-work-heading {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+body.dealifly-homepage .dealifly-process-subheading {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+body.dealifly-homepage .dealifly-industries-section .gsap-text-animation,
+body.dealifly-homepage .dealifly-industries-section .gsap-text-animation div,
+body.dealifly-homepage .dealifly-services-section .gsap-text-animation,
+body.dealifly-homepage .dealifly-services-section .gsap-text-animation div,
+body.dealifly-homepage .dealifly-process-section .gsap-text-animation,
+body.dealifly-homepage .dealifly-process-section .gsap-text-animation div,
+body.dealifly-homepage .dealifly-reviews-section .gsap-text-animation,
+body.dealifly-homepage .dealifly-reviews-section .gsap-text-animation div {
+    text-align: left !important;
+    justify-content: flex-start !important;
 }
 
 /* Hero CTA Group */

@@ -17,6 +17,8 @@ function dealifly_redirect(string $status): void
         $page = 'industries/recruitment-agencies.html#contact-section';
     } elseif (strpos($referer, 'accounting-firm.html') !== false) {
         $page = 'industries/accounting-firm.html#contact-section';
+    } elseif (strpos($referer, 'company-growth-marketing.html') !== false) {
+        $page = 'company-growth-marketing.html#contact-form';
     }
     
     $parts = explode('#', $page);

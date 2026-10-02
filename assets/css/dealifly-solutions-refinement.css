@@ -574,14 +574,59 @@ body.dealifly-solutions-page .dealifly-footer .container {
 }
 
 .dealifly-solution-section-header .dealifly-kicker,
-.dealifly-b2b-section-header .dealifly-kicker {
+.dealifly-solution-section-header .dealifly-cap-badge,
+.dealifly-b2b-section-header .dealifly-kicker,
+.dealifly-b2b-section-header .dealifly-cap-badge,
+.dealifly-overview-card .dealifly-kicker,
+.dealifly-overview-card .dealifly-cap-badge,
+.dealifly-pricing-banner .dealifly-kicker,
+.dealifly-pricing-banner .dealifly-cap-badge,
+.dealifly-cap-badge,
+.dealifly-kicker {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    padding: 0.28rem 0.8rem !important;
+    border-radius: 9999px !important;
+    background: rgba(18, 17, 26, 0.75) !important;
+    border: 1px solid rgba(143, 122, 232, 0.28) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    font-family: var(--dealifly-font-sans, "Plus Jakarta Sans", sans-serif) !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    color: var(--dealifly-purple-soft, #8F7AE8) !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.85rem !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+    transition: color 240ms ease, border-color 240ms ease, background 240ms ease !important;
+}
+
+.dealifly-cap-badge__dot,
+.dealifly-solution-badge__dot {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background: #8F7AE8 !important;
+    box-shadow: 0 0 6px rgba(143, 122, 232, 0.7) !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+}
+
+.dealifly-kicker:empty::before,
+.dealifly-kicker:not(:has(.dealifly-cap-badge__dot)):not(:has(.dealifly-solution-badge__dot))::before {
+    content: '';
     display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--df-purple-soft, #8F7AE8);
-    margin-bottom: 0.65rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #8F7AE8;
+    box-shadow: 0 0 6px rgba(143, 122, 232, 0.7);
+    flex-shrink: 0;
 }
 
 .dealifly-solution-section-header .dealifly-heading-lg,
@@ -626,15 +671,6 @@ body.dealifly-solutions-page .dealifly-footer .container {
     opacity: 0.8;
 }
 
-.dealifly-overview-card .dealifly-kicker {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--df-purple-soft, #8F7AE8);
-    margin-bottom: 0.65rem;
-}
 
 .dealifly-overview-card .dealifly-heading-lg {
     font-size: clamp(1.75rem, 2.8vw, 2.35rem);
